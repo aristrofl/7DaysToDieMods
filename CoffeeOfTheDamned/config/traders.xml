@@ -1,0 +1,14 @@
+<CoffeeOfTheDamned>
+<append xpath="/traders/trader_item_groups/trader_item_group[@name='cannedfood']">
+	<item name="COTDPureMalk"/>
+</append>
+<append xpath="/traders/trader_item_groups/trader_item_group[@name='tools']">
+	<item name="COTDCoffeePot"/>
+</append>
+<append xpath="/traders/trader_item_groups/trader_item_group[@name='rareTools']">
+	<item name="COTDSteamer"/>
+</append>
+<append xpath="/traders/trader_item_groups/trader_item_group[@name='workstations']">
+	<item name="COTDCoffeeMachine"/>
+</append>
+</CoffeeOfTheDamned>

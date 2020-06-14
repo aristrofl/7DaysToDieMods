@@ -1,0 +1,149 @@
+<CoffeeOfTheDamned>
+<append xpath="/items">
+	<item name="COTDCoffeeBlack">
+		<property name="HoldType" value="3"/>
+		<property name="CustomIcon" value="COTDCoffeeBlack"/>
+		<property name="DisplayType" value="waterCoffee"/>
+		<property name="Meshfile" value="#Other/Items?Food/bottled_waterPrefab.prefab"/>
+		<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+		<property name="Material" value="Morganic"/>
+		<property name="Weight" value="10"/>
+		<property name="Stacknumber" value="10"/> <!-- STK drink -->
+		<property name="EconomicValue" value="100"/>
+		<property name="UnlockedBy" value="perkMasterChef"/>
+		<property class="Action0">
+			<property name="Class" value="Eat"/>
+			<property name="Delay" value="1.0"/>
+			<property name="Use_time" value="..."/>
+			<property name="Sound_start" value="player_drinking"/>
+			<property name="Create_item" value="drinkCanEmpty"/>
+		</property>
+		<property name="Group" value="Food/Cooking,CFDrink/Cooking"/>
+		<effect_group tiered="false">
+			<requirement name="NotHasBuff" buff="buffIsOnFire"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="20"/>
+			<display_value name="dStaminaRegen" value=".2"/>
+			<display_value name="dHypothermalResist" value="5"/>
+			<display_value name="dDuration" value="183"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffCoffeeDuration" operation="add" value="600"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffCoffeeDuration" operation="set" value="600">
+				<requirement name="CVarCompare" cvar="$buffCoffeeDuration" operation="GT" value="600"/></triggered_effect>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables,buffCoffee"/>
+		</effect_group>
+
+		<effect_group tiered="false">
+			<requirement name="HasBuff" buff="buffIsOnFire"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffExtinguishFire"/>
+		</effect_group>
+	</item>
+	<item name="COTDCoffeeCream">
+		<property name="HoldType" value="3"/>
+		<property name="CustomIcon" value="COTDCoffeeCream"/>
+		<property name="DisplayType" value="waterCoffee"/>
+		<property name="Meshfile" value="#Other/Items?Food/bottled_waterPrefab.prefab"/>
+		<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+		<property name="Material" value="Morganic"/>
+		<property name="Weight" value="10"/>
+		<property name="Stacknumber" value="10"/> <!-- STK drink -->
+		<property name="EconomicValue" value="200"/>
+		<property class="Action0">
+			<property name="Class" value="Eat"/>
+			<property name="Delay" value="1.0"/>
+			<property name="Use_time" value="..."/>
+			<property name="Sound_start" value="player_drinking"/>
+			<property name="Create_item" value="drinkCanEmpty"/>
+		</property>
+		<property name="Group" value="Food/Cooking,CFDrink/Cooking"/>
+		<effect_group tiered="false">
+			<requirement name="NotHasBuff" buff="buffIsOnFire"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="40"/>
+			<display_value name="dStaminaRegen" value=".3"/>
+			<display_value name="dHypothermalResist" value="10"/>
+			<display_value name="dDuration" value="1200"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffCoffeeDuration" operation="add" value="1200"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffCoffeeDuration" operation="set" value="1200">
+				<requirement name="CVarCompare" cvar="$buffCoffeeDuration" operation="GT" value="1200"/></triggered_effect>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables,buffCoffee"/>
+		</effect_group>
+
+		<effect_group tiered="false">
+			<requirement name="HasBuff" buff="buffIsOnFire"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffExtinguishFire"/>
+		</effect_group>
+	</item>
+	<item name="COTDCoffeeFoam">
+		<property name="HoldType" value="3"/>
+		<property name="CustomIcon" value="COTDCoffeeFoam"/>
+		<property name="DisplayType" value="waterCoffee"/>
+		<property name="Meshfile" value="#Other/Items?Food/bottled_waterPrefab.prefab"/>
+		<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+		<property name="Material" value="Morganic"/>
+		<property name="Weight" value="10"/>
+		<property name="Stacknumber" value="10"/> <!-- STK drink -->
+		<property name="EconomicValue" value="300"/>
+		<property name="UnlockedBy" value="perkMasterChef"/>
+		<property class="Action0">
+			<property name="Class" value="Eat"/>
+			<property name="Delay" value="1.0"/>
+			<property name="Use_time" value="..."/>
+			<property name="Sound_start" value="player_drinking"/>
+			<property name="Create_item" value="drinkCanEmpty"/>
+		</property>
+		<property name="Group" value="Food/Cooking,CFDrink/Cooking"/>
+		<effect_group tiered="false">
+			<requirement name="NotHasBuff" buff="buffIsOnFire"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="60"/>
+			<display_value name="dStaminaRegen" value=".4"/>
+			<display_value name="dHypothermalResist" value="15"/>
+			<display_value name="dDuration" value="1800"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffCoffeeDuration" operation="add" value="1800"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffCoffeeDuration" operation="set" value="1800">
+				<requirement name="CVarCompare" cvar="$buffCoffeeDuration" operation="GT" value="1800"/></triggered_effect>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables,buffCoffee"/>
+		</effect_group>
+
+		<effect_group tiered="false">
+			<requirement name="HasBuff" buff="buffIsOnFire"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffExtinguishFire"/>
+		</effect_group>
+	</item>
+	<item name="COTDPureMalk">
+	<property name="Extends" value="foodCanBeef"/>
+	<property name="DisplayType" value="foodWater"/>
+	<property name="CustomIcon" value="COTDPureMalk"/>
+		<effect_group tiered="false">
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="8"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="0"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="1"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+		</effect_group>
+	</item>
+	<item name="COTDCoffeePot">
+		<!-- <property name="UnlockedBy" value="HD Cnc HandGuns Schematic"/> -->
+		<property name="DescriptionKey" value="COTDCoffeePotDesc"/>
+		<property name="CustomIcon" value="COTDCoffeePot"/>
+		<property name="HoldType" value="45"/>
+		<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
+		<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+		<property name="Material" value="Mglass"/>
+		<property name="Weight" value="15"/>
+		<property name="Stacknumber" value="10"/>
+		<property name="EconomicValue" value="250"/>
+		<property name="Group" value="Tools/Traps"/>
+	</item>
+	
+	<item name="COTDSteamer">
+		<!-- <property name="UnlockedBy" value="HD Cnc HandGuns Schematic"/> -->
+		<property name="DescriptionKey" value="COTDSteamerDesc"/>
+		<property name="CustomIcon" value="COTDSteamer"/>
+		<property name="HoldType" value="45"/>
+		<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
+		<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+		<property name="Material" value="Mglass"/>
+		<property name="Weight" value="15"/>
+		<property name="Stacknumber" value="10"/>
+		<property name="EconomicValue" value="450"/>
+		<property name="Group" value="Tools/Traps"/>
+	</item>
+</append>
+</CoffeeOfTheDamned>

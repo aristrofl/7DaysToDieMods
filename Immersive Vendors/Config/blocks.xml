@@ -1,0 +1,976 @@
+<ImmersiveVendors>
+<append xpath="/blocks">
+	<block name="ImmersiveVendorsVendingMachineMaster">
+		<property name="Group" value="Science"/>
+		<property name="CreativeMode" value="Player"/>
+		<property name="DescriptionKey" value="ImmersiveVendorsSecureStorageChestDesc"/>
+		<property name="Class" value="VendingMachine"/>
+		<property name="CustomIcon" value="cntChest01"/>
+		<property name="Material" value="MwoodReinforced"/>
+		<property name="MaxDamage" value="5000"/>
+		<property name="StabilitySupport" value="true"/> <!-- build restriction -->
+		<property name="Shape" value="Ext3dModel"/> <property name="Texture" value="293"/>
+		<property name="Mesh" value="models"/>
+		<property name="Path" value="solid"/>
+		<property name="Place" value="TowardsPlacerInverted"/>
+		<property name="Model" value="LootContainers/chest01" param1="main_mesh"/> <property name="HandleFace" value="Bottom"/>
+		<property name="ImposterExchange" value="imposterQuarter" param1="154"/>
+		<property name="Collide" value="sight,movement,melee,bullet,arrow,rocket"/>
+		<property class="RepairItems"> <property name="resourceForgedIron" value="5"/> </property>
+		<property name="TraderID" value="3"/>
+		<property name="Stacknumber" value="50"/>
+		<property name="EconomicValue" value="2000"/>
+		<property name="Buff" value="buffShocked"/>
+		<drop event="Destroy" count="0"/>
+		<property name="FilterTags" value="floot,ffurniture"/>
+		<drop event="Destroy" count="0"/>
+	</block>
+	
+	<block name="ImmersiveVendorsVendingMachineHelper" count="1" craft_area="workbench" tags="workbenchCrafting">
+		<property name="Extends" value="ImmersiveVendorsVendingMachineMaster"/>
+		<property name="CustomIcon" value="ImmersiveVendorsVendingMachineMaster"/>
+		<property name="CreativeMode" value="Player"/>
+		<property name="ItemTypeIcon" value="all_blocks"/>
+		<property name="SelectAlternates" value="true" />
+		<property name="PlaceAltBlockValue" value="ImmersiveVendorsVendingMachineMaster,ImmersiveVendorsHardenedChestSecure,ImmersiveVendorsLootChestHero,ImmersiveVendorsLuggageBigClosed,ImmersiveVendorsLuggageMediumClosed,ImmersiveVendorsDuffle01,ImmersiveVendorsFetchQuestSatchel,ImmersiveVendorsSportsBag02,ImmersiveVendorsSportsBag01,ImmersiveVendorsLaundryBasketVer2Full,ImmersiveVendorsToolBoxClosed,ImmersiveVendorsRollingToolBoxClosed,ImmersiveVendorsTiltTruckFull,ImmersiveVendorsTrash_can01,ImmersiveVendorsBin,ImmersiveVendorsFancyGarbageCan,ImmersiveVendorsDomedTrashCanEmpty,ImmersiveVendorsBruteStyleTrashCanEmpty,ImmersiveVendorsDumpster,ImmersiveVendorsShoppingCart,ImmersiveVendorsShoppingBasket,ImmersiveVendorsCashRegister,ImmersiveVendorsUtilityCartFull,ImmersiveVendorsJanitorCartFull,ImmersiveVendorsBarrelPlasticQuadB,ImmersiveVendorsBarrelPlasticQuadA,ImmersiveVendorsBarrelPlasticSingle45,ImmersiveVendorsBarrelPlasticSingle00,ImmersiveVendorsBarrelWhiteQuadB,ImmersiveVendorsBarrelWhiteQuadA,ImmersiveVendorsBarrelWhiteSingle45,ImmersiveVendorsBarrelWhiteSingle00,ImmersiveVendorsBarrelRadiatedQuadB,ImmersiveVendorsBarrelRadiatedQuadA,ImmersiveVendorsBarrelRadiatedSingle45,ImmersiveVendorsBarrelRadiatedSingle00,ImmersiveVendorsBarrelOilQuadB,ImmersiveVendorsBarrelOilQuadA,ImmersiveVendorsBarrelOilSingle45,ImmersiveVendorsBarrelOilSingle00,ImmersiveVendorsBarrelGenericQuadB,ImmersiveVendorsBarrelGenericQuadA,ImmersiveVendorsBarrelGenericSingle45,ImmersiveVendorsBarrelGenericSingle00,ImmersiveVendorsBarrelGasOld,ImmersiveVendorsBarrelGasQuadB,ImmersiveVendorsBarrelGasQuadA,ImmersiveVendorsBarrelGasSingle45,ImmersiveVendorsBarrelGasSingle00,ImmersiveVendorsBarrelAcidQuadB,ImmersiveVendorsBarrelAcidQuadA,ImmersiveVendorsBarrelAcidSingle45,ImmersiveVendorsBarrelAcidSingle00,ImmersiveVendorsCoffeeMakerCommercial,ImmersiveVendorsCoffeeMaker,ImmersiveVendorsWaterCoolerBottle,ImmersiveVendorsWaterCoolerFull,ImmersiveVendorsIceMachine,ImmersiveVendorsSodaFountain,ImmersiveVendorsFoodPileSmall,ImmersiveVendorsFoodPileMedium,ImmersiveVendorsFoodPileLarge,ImmersiveVendorsMedicalPileSmall,ImmersiveVendorsMedicalPileMedium,ImmersiveVendorsMedicalPileLarge,ImmersiveVendorsMedicLootPileA,ImmersiveVendorsMedicLootPileB,ImmersiveVendorsAmmoPileLarge,ImmersiveVendorsAmmoPileMedium,ImmersiveVendorsAmmoPileSmall,ImmersiveVendorsNightstandClosed,ImmersiveVendorsMunitionsBox,ImmersiveVendorsLockersShortClosed,ImmersiveVendorsLockers,ImmersiveVendorsLockersTallDoubleClosed,ImmersiveVendorsLockersTallMixClosed,ImmersiveVendorsLockersTallMixLinkClosed,ImmersiveVendorsFileCabinetShortClosed,ImmersiveVendorsFileCabinet,ImmersiveVendorsCardboardBox,ImmersiveVendorsFridge,ImmersiveVendorsRetroFridge,ImmersiveVendorsPillCase,ImmersiveVendorsBeerCooler,ImmersiveVendorsMedicineCabinet,ImmersiveVendorsBookcase,ImmersiveVendorsWallSafe,ImmersiveVendorsCoffin,ImmersiveVendorsGasPump,ImmersiveVendorspalletWhiteBagsBase,ImmersiveVendorspalletWhiteBagsTile,ImmersiveVendorspalletWhiteBagsTop,ImmersiveVendorspalletWhiteBagsPartial1,ImmersiveVendorspalletWhiteBagsPartial2,ImmersiveVendorspalletWhiteBagsLoose,ImmersiveVendorspalletBrownBoxesBase,ImmersiveVendorspalletBrownBoxesTile,ImmersiveVendorspalletBrownBoxesTop,ImmersiveVendorspalletBrownBoxesLoose,ImmersiveVendorspalletBricksBase,ImmersiveVendorspalletBricksTile,ImmersiveVendorspalletBricksTop,ImmersiveVendorspalletBricksPartial1,ImmersiveVendorspalletBricksPartial2,ImmersiveVendorspalletBricksLoose,ImmersiveVendorspalletBlueTarpBase,ImmersiveVendorspalletBlueTarpTile,ImmersiveVendorsmodularFireWoodStackA,ImmersiveVendorsmodularFireWoodStackB,ImmersiveVendorsmodularFireWoodStackC,ImmersiveVendorsCoolerClosed,ImmersiveVendorsWeaponsBagSmall,ImmersiveVendorsWeaponsBagLarge,ImmersiveVendorsSpeaker"/>
+	</block>
+	
+	<block name="ImmersiveVendorsHardenedChestSecure">
+		<property name="Extends" value="ImmersiveVendorsVendingMachineMaster" />
+		<property name="CustomIcon" value="cntHardenedChestSecure" />
+		<property name="DisplayType" value="blockHardenedMulti"/>
+		<property name="Shape" value="ModelEntity"/>
+		<property name="Model" value="#Entities/LootContainers?super_chestPrefab.prefab"/>
+		<property name="ModelOffset" value=".5,.5,0"/>
+		<property name="MultiBlockDim" value="2,1,1"/>
+	</block>
+
+	<block name="ImmersiveVendorsLootChestHero">
+		<property name="Extends" value="ImmersiveVendorsVendingMachineMaster" />
+		<property name="CustomIcon" value="cntLootChestHero" />
+		<property name="Shape" value="ModelEntity"/>
+		<property name="Model" value="#Entities/LootContainers?loot_cratePrefab.prefab"/>
+	</block>
+
+	<block name="ImmersiveVendorsJanitorCartFull">
+		<property name="Extends" value="ImmersiveVendorsVendingMachineMaster"/>
+		<property name="CustomIcon" value="cntJanitorCartFull" />
+		<property name="Shape" value="ModelEntity"/>
+		<property name="Model" value="Entities/Commercial/janitorCartPrefab"/>
+		<property name="DisplayType" value="blockMulti"/>
+		<property name="MultiBlockDim" value="2,1,1"/>
+	</block>
+
+	<block name="ImmersiveVendorsUtilityCartFull">
+		<property name="Extends" value="ImmersiveVendorsVendingMachineMaster"/>
+		<property name="CustomIcon" value="cntUtilityCartFull" />
+		<property name="Shape" value="ModelEntity"/>
+		<property name="Model" value="#Entities/LootContainers?utilityCartFullPrefab.prefab"/>
+		<property name="DescriptionKey" value="ImmersiveVendorsUtilityCartFullDesc"/>
+	</block>
+
+	<block name="ImmersiveVendorsTiltTruckFull">
+		<property name="Extends" value="ImmersiveVendorsVendingMachineMaster"/>
+		<property name="CustomIcon" value="cntTiltTruckFull" />
+		<property name="Shape" value="ModelEntity"/>
+		<property name="Model" value="#Entities/LootContainers?tiltTruckFullPrefab.prefab"/>
+		<property name="DescriptionKey" value="ImmersiveVendorsTiltTruckFullDesc"/>
+	</block>
+	
+	<block name="ImmersiveVendorsTrash_can01">
+		<property name="Extends" value="ImmersiveVendorsVendingMachineMaster"/>
+		<property name="CustomIcon" value="cntTrash_can01" />
+		<property name="Shape" value="Ext3dModel"/> <property name="Texture" value="293"/>
+		<property name="Mesh" value="models"/>
+		<property name="Path" value="solid"/>
+		<property name="Model" value="LootContainers/trash_can01" param1="main_mesh"/>
+		<property name="LootList" value="429"/>
+		<property name="Class" value="SecureLoot"/>
+		<property name="DescriptionKey" value="ImmersiveVendorsTrash_can01Desc"/>
+	</block>
+	
+	<block name="ImmersiveVendorsBin">
+		<property name="Extends" value="ImmersiveVendorsVendingMachineMaster"/>
+		<property name="CustomIcon" value="cntBin" />
+		<property name="Shape" value="Ext3dModel"/> <property name="Texture" value="293"/>
+		<property name="Mesh" value="models"/>
+		<property name="Model" value="LootContainers/bin" param1="main_mesh"/>
+		<property name="DescriptionKey" value="ImmersiveVendorsBinDesc"/>
+	</block>
+	
+	<block name="ImmersiveVendorsFancyGarbageCan">
+		<property name="Extends" value="ImmersiveVendorsVendingMachineMaster"/>
+		<property name="CustomIcon" value="cntFancyGarbageCan" />
+		<property name="Shape" value="ModelEntity"/>
+		<property name="Path" value="solid"/>
+		<property name="Model" value="#Entities/LootContainers?fancy_garbage_canPrefab.prefab"/>
+		<property name="DescriptionKey" value="ImmersiveVendorsFancyGarbageCanDesc"/>
+	</block>
+	
+	<block name="ImmersiveVendorsDomedTrashCanEmpty">
+		<property name="Extends" value="ImmersiveVendorsVendingMachineMaster"/>
+		<property name="CustomIcon" value="cntDomedTrashCanEmpty" />
+		<property name="Shape" value="ModelEntity"/>
+		<property name="Model" value="#Entities/LootContainers?domedTrashCanEmptyPrefab.prefab"/>
+		<property name="Path" value="solid"/>
+		<property name="DescriptionKey" value="ImmersiveVendorsDomedTrashCanEmptyDesc"/>
+	</block>
+	
+	<block name="ImmersiveVendorsBruteStyleTrashCanEmpty">
+		<property name="Extends" value="ImmersiveVendorsVendingMachineMaster"/>
+		<property name="CustomIcon" value="cntBruteStyleTrashCanEmpty" />
+		<property name="Shape" value="ModelEntity"/>
+		<property name="Model" value="#Entities/LootContainers?bruteStyleTrashCanEmptyPrefab.prefab"/>
+		<property name="Path" value="solid"/>
+		<property name="DescriptionKey" value="ImmersiveVendorsBruteStyleTrashCanEmptyDesc"/>
+	</block>
+	
+	<block name="ImmersiveVendorsDumpster">
+		<property name="Extends" value="ImmersiveVendorsVendingMachineMaster"/>
+		<property name="CustomIcon" value="cntDumpster" />
+		<property name="Path" value="solid"/>
+		<property name="Shape" value="ModelEntity"/>
+		<property name="Model" value="#Entities/LootContainers?dumpsterPrefab.prefab"/> <property name="Place" value="TowardsPlacer"/>
+		<property name="ModelOffset" value="0,.5,.5"/>
+		<property name="DisplayType" value="blockMulti"/>
+		<property name="MultiBlockDim" value="3,2,2"/>
+		<property name="DescriptionKey" value="ImmersiveVendorsDumpsterDesc"/>
+	</block>
+
+	<block name="ImmersiveVendorsShoppingCart">
+		<property name="Extends" value="ImmersiveVendorsVendingMachineMaster"/>
+		<property name="CustomIcon" value="cntShoppingCart" />
+		<property name="Shape" value="ModelEntity"/>
+		<property name="Model" value="#Entities/LootContainers?shopping_cartPrefab.prefab"/>
+		<property name="DescriptionKey" value="ImmersiveVendorsShoppingCartDesc"/>
+	</block>
+	
+	<block name="ImmersiveVendorsShoppingBasket">
+		<property name="Extends" value="ImmersiveVendorsVendingMachineMaster"/>
+		<property name="CustomIcon" value="cntShoppingBasketEmpty" />
+		<property name="Shape" value="Ext3dModel"/> <property name="Texture" value="293"/>
+		<property name="Mesh" value="models"/>
+		<property name="Model" value="LootContainers/shopping_basket" param1="main_mesh"/>
+		<property name="DescriptionKey" value="ImmersiveVendorsShoppingBasketDesc"/>
+	</block>
+	
+	<block name="ImmersiveVendorsCashRegister">
+		<property name="Extends" value="ImmersiveVendorsVendingMachineMaster"/>
+		<property name="CustomIcon" value="cntCashRegister" />
+		<property name="Shape" value="Ext3dModel"/> <property name="Texture" value="293"/>
+		<property name="Mesh" value="models"/>
+		<property name="Model" value="LootContainers/cash_register" param1="main_mesh"/>
+		<property name="DescriptionKey" value="ImmersiveVendorsCashRegisterDesc"/>
+	</block>
+
+	<block name="ImmersiveVendorsRollingToolBoxClosed">
+		<property name="Extends" value="ImmersiveVendorsVendingMachineMaster"/>
+		<property name="CustomIcon" value="cntRollingToolBoxClosed" />
+		<property name="Shape" value="ModelEntity"/>
+		<property name="Model" value="#Entities/LootContainers?rollingToolChestClosedPrefab.prefab"/>
+		<property name="DescriptionKey" value="ImmersiveVendorsRollingToolBoxClosedDesc"/>
+	</block>
+
+	<block name="ImmersiveVendorsToolBoxClosed">
+		<property name="Extends" value="ImmersiveVendorsVendingMachineMaster"/>
+		<property name="CustomIcon" value="cntToolBoxClosed" />
+		<property name="Shape" value="ModelEntity"/>
+		<property name="Model" value="#Entities/LootContainers?metalToolBoxClosedPrefab.prefab"/>
+		<property name="DescriptionKey" value="ImmersiveVendorsToolBoxClosedDesc"/>
+	</block>
+
+	<block name="ImmersiveVendorsLaundryBasketVer2Full">
+		<property name="Extends" value="ImmersiveVendorsVendingMachineMaster"/>
+		<property name="CustomIcon" value="cntLaundryBasketVer2Full" />
+		<property name="Shape" value="Ext3dModel"/> <property name="Texture" value="293"/>
+		<property name="Mesh" value="models"/>
+		<property name="Model" value="Misc/laundry_basket_ver2" param1="main_mesh"/>
+		<property name="DescriptionKey" value="ImmersiveVendorsLaundryBasketVer2FullDesc"/>
+	</block>
+
+	<block name="ImmersiveVendorsSportsBag01">
+		<property name="Extends" value="ImmersiveVendorsVendingMachineMaster"/>
+		<property name="CustomIcon" value="cntSportsBag01" />
+		<property name="Shape" value="ModelEntity"/>
+		<property name="Model" value="#Entities/LootContainers?sports_bag01Prefab.prefab"/>
+		<property name="DescriptionKey" value="ImmersiveVendorsSportsBag01Desc"/>
+	</block>
+
+	<block name="ImmersiveVendorsSportsBag02">
+		<property name="Extends" value="ImmersiveVendorsVendingMachineMaster"/>
+		<property name="CustomIcon" value="cntSportsBag02" />
+		<property name="Shape" value="ModelEntity"/>
+		<property name="Model" value="#Entities/LootContainers?sports_bag02Prefab.prefab"/>
+		<property name="DescriptionKey" value="ImmersiveVendorsSportsBag02Desc"/>
+	</block>
+
+	<block name="ImmersiveVendorsDuffle01">
+		<property name="Extends" value="ImmersiveVendorsVendingMachineMaster"/>
+		<property name="CustomIcon" value="cntDuffle01" />
+		<property name="Shape" value="ModelEntity"/>
+		<property name="Model" value="#Entities/LootContainers?duffle01Prefab.prefab"/>
+		<property name="DescriptionKey" value="ImmersiveVendorsDuffle01Desc"/>
+	</block>
+	
+	<block name="ImmersiveVendorsFetchQuestSatchel">
+		<property name="Extends" value="ImmersiveVendorsVendingMachineMaster"/>
+		<property name="CustomIcon" value="cntFetchQuestSatchel" />
+		<property name="Shape" value="ModelEntity"/>
+		<property name="Model" value="#Entities/LootContainers?loot_satchelPrefab.prefab"/>
+		<property name="DescriptionKey" value="ImmersiveVendorsFetchQuestSatchelDesc"/>
+	</block>
+
+	<block name="ImmersiveVendorsLuggageMediumClosed">
+		<property name="Extends" value="ImmersiveVendorsVendingMachineMaster"/>
+		<property name="CustomIcon" value="cntLuggageMediumClosed" />
+		<property name="Shape" value="ModelEntity"/>
+		<property name="Model" value="#Entities/LootContainers?luggageMediumClosedPrefab.prefab"/>
+		<property name="DescriptionKey" value="ImmersiveVendorsLuggageMediumClosedDesc"/>
+	</block>
+
+	<block name="ImmersiveVendorsLuggageBigClosed">
+		<property name="Extends" value="ImmersiveVendorsVendingMachineMaster"/>
+		<property name="CustomIcon" value="cntLuggageBigClosed" />
+		<property name="Shape" value="ModelEntity"/>
+		<property name="Model" value="#Entities/LootContainers?luggageBigClosedPrefab.prefab"/>
+		<property name="DescriptionKey" value="ImmersiveVendorsLuggageBigClosedDesc"/>
+	</block>
+	
+	<block name="ImmersiveVendorsWeaponsBagSmall">
+		<property name="Extends" value="ImmersiveVendorsVendingMachineMaster"/>
+		<property name="CustomIcon" value="cntWeaponsBagSmall" />
+		<property name="Shape" value="ModelEntity"/>
+		<property name="Model" value="#Entities/LootContainers?weapon_bags_smallPrefab.prefab"/>
+		<property name="DescriptionKey" value="ImmersiveVendorsWeaponsBagSmallDesc"/>
+		
+	</block>
+	
+	<block name="ImmersiveVendorsWeaponsBagLarge">
+		<property name="Extends" value="ImmersiveVendorsVendingMachineMaster"/>
+		<property name="CustomIcon" value="cntWeaponsBagLarge" />		
+		<property name="Shape" value="ModelEntity"/>
+		<property name="Model" value="#Entities/LootContainers?weapon_bags_largePrefab.prefab"/>
+		<property name="DescriptionKey" value="ImmersiveVendorsWeaponsBagLargeDesc"/>
+	</block>
+	
+    <block name="ImmersiveVendorsMunitionsBox">
+        <property name="Extends" value="ImmersiveVendorsVendingMachineMaster" />
+		<property name="CustomIcon" value="cntMunitionsBox" />
+		<property name="Shape" value="Ext3dModel"/> <property name="Texture" value="293"/>
+		<property name="Mesh" value="models"/>
+		<property name="Model" value="LootContainers/munitions_box01" param1="main_mesh"/>
+		<property name="DescriptionKey" value="ImmersiveVendorsMunitionsBoxDesc"/>
+    </block>
+	
+	<block name="ImmersiveVendorsNightstandClosed">
+		<property name="Extends" value="ImmersiveVendorsVendingMachineMaster"/>
+		<property name="CustomIcon" value="cntNightstandClosed" />
+		<property name="Path" value="solid"/>
+		<property name="Shape" value="ModelEntity"/>
+		<property name="Model" value="#Entities/LootContainers?nightStand_closedPrefab.prefab"/>
+		<property name="DescriptionKey" value="ImmersiveVendorsNightstandClosedDesc"/>
+	</block>
+	
+	<block name="ImmersiveVendorsLockersShortClosed">
+		<property name="Extends" value="ImmersiveVendorsVendingMachineMaster"/>
+		<property name="CustomIcon" value="cntLockersShortClosed" />
+		<property name="Shape" value="ModelEntity"/>
+		<property name="Model" value="#Entities/LootContainers?locker_ver3_lootPrefab.prefab"/>
+		<property name="DescriptionKey" value="ImmersiveVendorsLockersShortClosedDesc"/>
+	</block>
+	
+    <block name="ImmersiveVendorsLockers">
+        <property name="Extends" value="ImmersiveVendorsVendingMachineMaster" />
+		<property name="CustomIcon" value="cntLockersTallClosed" />
+        <property name="Shape" value="ModelEntity"/>
+        <property name="Model" value="#Entities/LootContainers?locker_ver1_lootPrefab.prefab"/>
+		<property name="DescriptionKey" value="ImmersiveVendorsLockersDesc"/>
+    </block>
+	
+	<block name="ImmersiveVendorsLockersTallDoubleClosed">
+		<property name="Extends" value="ImmersiveVendorsVendingMachineMaster"/>
+		<property name="CustomIcon" value="cntLockersTallDoubleClosed" />
+		<property name="Shape" value="ModelEntity"/>
+		<property name="Model" value="#Entities/LootContainers?locker_ver2_lootPrefab.prefab"/>
+		<property name="DescriptionKey" value="ImmersiveVendorsLockersTallDoubleClosedDesc"/>
+	</block>
+	
+	<block name="ImmersiveVendorsLockersTallMixClosed">
+		<property name="Extends" value="ImmersiveVendorsVendingMachineMaster"/>
+		<property name="CustomIcon" value="cntLockersTallMixClosed" />
+		<property name="Shape" value="ModelEntity"/>
+		<property name="Model" value="#Entities/LootContainers?locker_ver4_lootPrefab.prefab"/>
+		<property name="DescriptionKey" value="ImmersiveVendorsLockersTallMixClosedDesc"/>
+	</block>
+	
+	<block name="ImmersiveVendorsLockersTallMixLinkClosed">
+		<property name="Extends" value="ImmersiveVendorsVendingMachineMaster"/>
+		<property name="CustomIcon" value="cntLockersTallMixLinkClosed" />
+		<property name="Shape" value="ModelEntity"/>
+		<property name="Model" value="#Entities/LootContainers?locker_ver5_lootPrefab.prefab"/>
+		<property name="DescriptionKey" value="ImmersiveVendorsLockersTallMixLinkClosedDesc"/>
+	</block>
+	
+    <block name="ImmersiveVendorsFileCabinet">
+        <property name="Extends" value="ImmersiveVendorsVendingMachineMaster" />
+		<property name="CustomIcon" value="cntFileCabinetTallClosed" />
+        <property name="Shape" value="ModelEntity"/>
+        <property name="Model" value="#Entities/LootContainers?filecabinet_tall_closedPrefab.prefab"/>
+		<property name="DescriptionKey" value="ImmersiveVendorsFileCabinetDesc"/>
+    </block>
+	
+	<block name="ImmersiveVendorsFileCabinetShortClosed">
+		<property name="Extends" value="ImmersiveVendorsVendingMachineMaster" />
+		<property name="CustomIcon" value="cntFileCabinetShortClosed" />
+		<property name="Shape" value="ModelEntity"/>
+		<property name="Model" value="#Entities/LootContainers?filecabinet_short_closedPrefab.prefab"/>
+		<property name="DescriptionKey" value="ImmersiveVendorsFileCabinetShortClosedDesc"/>
+	</block>
+	
+    <block name="ImmersiveVendorsCardboardBox">
+        <property name="Extends" value="ImmersiveVendorsVendingMachineMaster" />
+		<property name="CustomIcon" value="cntGarageStorage" />
+        <property name="DescriptionKey" value="ImmersiveVendorsCardboardBoxDesc"/>
+		<drop event="Fall" name="terrDestroyedWoodDebris" count="1" prob="0.75" stick_chance="1"/>
+    </block>
+	
+	<block name="ImmersiveVendorsFoodPileSmall">
+		<property name="Extends" value="ImmersiveVendorsVendingMachineMaster"/>
+		<property name="CustomIcon" value="cntFoodPileSmall"/>
+		<property name="Shape" value="ModelEntity"/>
+		<property name="Model" value="#Entities/LootContainers?foodClutterPileSmallPrefab.prefab"/>
+		<property name="DescriptionKey" value="ImmersiveVendorsFoodPileSmallDesc"/>
+	</block>
+
+	<block name="ImmersiveVendorsFoodPileMedium">
+		<property name="Extends" value="ImmersiveVendorsVendingMachineMaster"/>
+		<property name="CustomIcon" value="cntFoodPileMedium"/>
+		<property name="Shape" value="ModelEntity"/>
+		<property name="Model" value="#Entities/LootContainers?foodClutterPileMediumPrefab.prefab"/>
+		<property name="DescriptionKey" value="ImmersiveVendorsFoodPileMediumDesc"/>
+	</block>
+
+	<block name="ImmersiveVendorsFoodPileLarge">
+		<property name="Extends" value="ImmersiveVendorsVendingMachineMaster"/>
+		<property name="CustomIcon" value="cntFoodPileLarge"/>
+		<property name="Shape" value="ModelEntity"/>
+		<property name="Model" value="#Entities/LootContainers?foodClutterPileLargePrefab.prefab"/>
+		<property name="DescriptionKey" value="ImmersiveVendorsFoodPileLargeDesc"/>	
+	</block>
+	
+    <block name="ImmersiveVendorsFridge">
+        <property name="Extends" value="ImmersiveVendorsVendingMachineMaster" />
+		<property name="CustomIcon" value="cntFridgeStainlessSteel" />
+        <property name="Shape" value="Ext3dModel"/> <property name="Texture" value="293"/>
+		<property name="Mesh" value="models"/>
+        <property name="Model" value="Appliances/stainless_steel_fridge" param1="main_mesh"/>
+		<property name="DisplayType" value="blockMulti"/>
+		<property name="MultiBlockDim" value="1,2,1"/>
+		<property name="DescriptionKey" value="ImmersiveVendorsFridgeDesc"/>
+    </block>
+	
+    <block name="ImmersiveVendorsRetroFridge">
+        <property name="Extends" value="ImmersiveVendorsVendingMachineMaster" />
+        <property name="CustomIcon" value="cntRetroFridgeVer1Closed" />
+		<property name="Shape" value="Ext3dModel"/> <property name="Texture" value="293"/>
+		<property name="Mesh" value="models"/>
+		<property name="Model" value="Appliances/retro_fridge_ver1" param1="main_mesh"/> <property name="Place" value="TowardsPlacerInverted"/>
+		<property name="DisplayType" value="blockMulti"/>
+		<property name="MultiBlockDim" value="1,2,1"/>
+		<property name="DescriptionKey" value="ImmersiveVendorsRetroFridgeDesc"/>
+    </block>
+		
+    <block name="ImmersiveVendorsBeerCooler">
+        <property name="Extends" value="ImmersiveVendorsVendingMachineMaster" />
+		<property name="CustomIcon" value="cntBeerCooler" />
+		<property name="DescriptionKey" value="ImmersiveVendorsBeerCoolerDesc"/>
+    </block>
+	
+	<block name="ImmersiveVendorsSodaFountain">
+		<property name="Extends" value="ImmersiveVendorsVendingMachineMaster"/>
+		<property name="CustomIcon" value="cntSodaFountain" />
+		<property name="Shape" value="ModelEntity"/>
+		<property name="Model" value="Entities/Electrical/sodaFountainPrefab"/>
+		<property name="DescriptionKey" value="ImmersiveVendorsSodaFountainDesc"/>
+	</block>
+	
+	<block name="ImmersiveVendorsIceMachine">
+		<property name="Extends" value="ImmersiveVendorsVendingMachineMaster"/>
+		<property name="CustomIcon" value="cntIceMachine" />
+		<property name="Shape" value="ModelEntity"/>
+		<property name="Model" value="Entities/OutdoorDecor/iceMachinePrefab"/> <property name="Place" value="TowardsPlacerInverted"/>
+		<property name="MultiBlockDim" value="2,2,1"/><property name="DisplayType" value="blockMulti"/>
+		<property name="DescriptionKey" value="ImmersiveVendorsIceMachineDesc"/>
+	</block>
+	
+	<block name="ImmersiveVendorsWaterCoolerFull">
+		<property name="Extends" value="ImmersiveVendorsVendingMachineMaster"/>
+		<property name="CustomIcon" value="cntWaterCoolerFull" />
+		<property name="Shape" value="ModelEntity"/>
+		<property name="Model" value="#Entities/LootContainers?water_cooler_fullPrefab.prefab"/> <property name="Place" value="TowardsPlacerInverted"/>
+		<property name="DisplayType" value="blockMulti"/>
+		<property name="MultiBlockDim" value="1,2,1"/>
+		<property name="DescriptionKey" value="ImmersiveVendorsWaterCoolerFullDesc"/>
+	</block>
+
+	<block name="ImmersiveVendorsWaterCoolerBottle">
+		<property name="Extends" value="ImmersiveVendorsVendingMachineMaster"/>
+		<property name="CustomIcon" value="cntWaterCoolerBottle" />
+		<property name="Shape" value="ModelEntity"/>
+		<property name="Model" value="#Entities/LootContainers?water_cooler_bottlePrefab.prefab"/>
+		<property name="DescriptionKey" value="ImmersiveVendorsWaterCoolerBottleDesc"/>
+	</block>
+		
+	<block name="ImmersiveVendorsCoolerClosed">
+		<property name="Extends" value="ImmersiveVendorsVendingMachineMaster"/>
+		<property name="CustomIcon" value="cntCoolerClosed" />
+		<property name="Shape" value="ModelEntity"/>
+		<property name="Model" value="#Entities/LootContainers?coolerPrefab.prefab"/>	
+		<property name="DescriptionKey" value="ImmersiveVendorsCoolerClosedDesc"/>	
+	</block>
+	
+	<block name="ImmersiveVendorsCoffeeMaker">
+		<property name="Extends" value="ImmersiveVendorsVendingMachineMaster"/>
+		<property name="CustomIcon" value="cntCoffeeMaker" />
+		<property name="Shape" value="ModelEntity"/>
+		<property name="Model" value="Entities/Appliances/coffeeMakerPrefab"/>
+		<property name="DescriptionKey" value="ImmersiveVendorsCoffeeMakerDesc"/>
+	</block>
+
+	<block name="ImmersiveVendorsCoffeeMakerCommercial">
+		<property name="Extends" value="ImmersiveVendorsVendingMachineMaster"/>
+		<property name="CustomIcon" value="cntCoffeeMakerCommercial" />
+		<property name="Shape" value="ModelEntity"/>
+		<property name="Model" value="Entities/Appliances/commercialCoffeeMakerPrefab"/>
+		<property name="DescriptionKey" value="ImmersiveVendorsCoffeeMakerCommercialDesc"/>
+	</block>
+	
+	<block name="ImmersiveVendorsBarrelAcidSingle00">
+		<property name="Extends" value="ImmersiveVendorsVendingMachineMaster"/>
+		<property name="CustomIcon" value="cntBarrelAcidSingle00" />
+		<property name="Shape" value="ModelEntity"/>
+		<property name="Model" value="Entities/Industrial/barrelAcidPrefab"/>
+		<property name="DescriptionKey" value="ImmersiveVendorsBarrelAcidSingle00Desc"/>
+		
+	</block>
+
+	<block name="ImmersiveVendorsBarrelAcidSingle45">
+		<property name="Extends" value="ImmersiveVendorsVendingMachineMaster"/>
+		<property name="CustomIcon" value="cntBarrelAcidSingle45" />
+		<property name="Shape" value="ModelEntity"/>
+		<property name="Model" value="Entities/Industrial/barrelAcid45Prefab"/>
+		<property name="DescriptionKey" value="ImmersiveVendorsBarrelAcidSingle45Desc"/>
+	</block>
+
+	<block name="ImmersiveVendorsBarrelAcidQuadA">
+		<property name="Extends" value="ImmersiveVendorsVendingMachineMaster"/>
+		<property name="CustomIcon" value="cntBarrelAcidQuadA" />
+		<property name="Shape" value="ModelEntity"/>
+		<property name="Model" value="Entities/Industrial/barrelAcidQuadAPrefab"/>
+		<property name="DescriptionKey" value="ImmersiveVendorsBarrelAcidQuadADesc"/>
+	</block>
+
+	<block name="ImmersiveVendorsBarrelAcidQuadB">
+		<property name="Extends" value="ImmersiveVendorsVendingMachineMaster"/>
+		<property name="CustomIcon" value="cntBarrelAcidQuadB" />
+		<property name="Shape" value="ModelEntity"/>
+		<property name="Model" value="Entities/Industrial/barrelAcidQuadBPrefab"/>
+		<property name="DescriptionKey" value="ImmersiveVendorsBarrelAcidQuadBDesc"/>
+	</block>
+
+	<block name="ImmersiveVendorsBarrelGasSingle00">
+		<property name="Extends" value="ImmersiveVendorsVendingMachineMaster"/>
+		<property name="CustomIcon" value="cntBarrelGasSingle00" />
+		<property name="Shape" value="ModelEntity"/>
+		<property name="Model" value="Entities/Industrial/barrelGasPrefab"/>
+		<property name="LootList" value="120"/>
+		<property name="DescriptionKey" value="ImmersiveVendorsBarrelGasSingle00Desc"/>	
+	</block>
+
+	<block name="ImmersiveVendorsBarrelGasSingle45">
+		<property name="Extends" value="ImmersiveVendorsVendingMachineMaster"/>
+		<property name="CustomIcon" value="cntBarrelGasSingle45" />
+		<property name="Shape" value="ModelEntity"/>
+		<property name="Model" value="Entities/Industrial/barrelGas45Prefab"/>
+		<property name="DescriptionKey" value="ImmersiveVendorsBarrelGasSingle45Desc"/>
+	</block>
+
+	<block name="ImmersiveVendorsBarrelGasQuadA">
+		<property name="Extends" value="ImmersiveVendorsVendingMachineMaster"/>
+		<property name="CustomIcon" value="cntBarrelGasQuadA" />
+		<property name="Shape" value="ModelEntity"/>
+		<property name="Model" value="Entities/Industrial/barrelGasQuadAPrefab"/>
+		<property name="DescriptionKey" value="ImmersiveVendorsBarrelGasQuadADesc"/>
+	</block>
+
+	<block name="ImmersiveVendorsBarrelGasQuadB">
+		<property name="Extends" value="ImmersiveVendorsVendingMachineMaster"/>
+		<property name="CustomIcon" value="cntBarrelGasQuadB" />
+		<property name="Shape" value="ModelEntity"/>
+		<property name="Model" value="Entities/Industrial/barrelGasQuadBPrefab"/>
+		<property name="DescriptionKey" value="ImmersiveVendorsBarrelGasQuadBDesc"/>
+	</block>
+
+	<block name="ImmersiveVendorsBarrelGasOld">
+		<property name="Extends" value="ImmersiveVendorsVendingMachineMaster"/>
+		<property name="CustomIcon" value="cntBarrelGasOld" />
+		<property name="Shape" value="ModelEntity"/>
+		<property name="Model" value="Entities/Industrial/barrel03Prefab"/>
+		<property name="DescriptionKey" value="ImmersiveVendorsBarrelGasOldDesc"/>
+	</block>
+
+	<block name="ImmersiveVendorsBarrelGenericSingle00">
+		<property name="Extends" value="ImmersiveVendorsVendingMachineMaster"/>
+		<property name="CustomIcon" value="cntBarrelGenericSingle00" />
+		<property name="Shape" value="ModelEntity"/>
+		<property name="Model" value="Entities/Industrial/barrelGenericPrefab"/>
+		<property name="DescriptionKey" value="ImmersiveVendorsBarrelGenericSingle00Desc"/>
+	</block>
+
+	<block name="ImmersiveVendorsBarrelGenericSingle45">
+		<property name="Extends" value="ImmersiveVendorsVendingMachineMaster"/>
+		<property name="CustomIcon" value="cntBarrelGenericSingle45" />
+		<property name="Shape" value="ModelEntity"/>
+		<property name="Model" value="Entities/Industrial/barrelGeneric45Prefab"/>
+		<property name="DescriptionKey" value="ImmersiveVendorsBarrelGenericSingle45Desc"/>
+	</block>
+
+	<block name="ImmersiveVendorsBarrelGenericQuadA">
+		<property name="Extends" value="ImmersiveVendorsVendingMachineMaster"/>
+		<property name="CustomIcon" value="cntBarrelGenericQuadA" />
+		<property name="Shape" value="ModelEntity"/>
+		<property name="Model" value="Entities/Industrial/barrelGenericQuadAPrefab"/>
+		<property name="DescriptionKey" value="ImmersiveVendorsBarrelGenericQuadADesc"/>
+	</block>
+
+	<block name="ImmersiveVendorsBarrelGenericQuadB">
+		<property name="Extends" value="ImmersiveVendorsVendingMachineMaster"/>
+		<property name="CustomIcon" value="cntBarrelGenericQuadB" />
+		<property name="Shape" value="ModelEntity"/>
+		<property name="Model" value="Entities/Industrial/barrelGenericQuadBPrefab"/>
+		<property name="DescriptionKey" value="ImmersiveVendorsBarrelGenericQuadBDesc"/>
+	</block>
+
+	<block name="ImmersiveVendorsBarrelOilSingle00">
+		<property name="Extends" value="ImmersiveVendorsVendingMachineMaster"/>
+		<property name="CustomIcon" value="cntBarrelOilSingle00" />
+		<property name="Shape" value="ModelEntity"/>
+		<property name="Model" value="Entities/Industrial/barrelOilPrefab"/>
+		<property name="DescriptionKey" value="ImmersiveVendorsBarrelOilSingle00Desc"/>
+	</block>
+
+	<block name="ImmersiveVendorsBarrelOilSingle45">
+		<property name="Extends" value="ImmersiveVendorsVendingMachineMaster"/>
+		<property name="CustomIcon" value="cntBarrelOilSingle45" />
+		<property name="Shape" value="ModelEntity"/>
+		<property name="Model" value="Entities/Industrial/barrelOil45Prefab"/>
+		<property name="DescriptionKey" value="ImmersiveVendorsBarrelOilSingle45Desc"/>
+	</block>
+
+	<block name="ImmersiveVendorsBarrelOilQuadA">
+		<property name="Extends" value="ImmersiveVendorsVendingMachineMaster"/>
+		<property name="CustomIcon" value="cntBarrelOilQuadA" />
+		<property name="Shape" value="ModelEntity"/>
+		<property name="Model" value="Entities/Industrial/barrelOilQuadAPrefab"/>
+		<property name="DescriptionKey" value="ImmersiveVendorsBarrelOilQuadADesc"/>
+	</block>
+
+	<block name="ImmersiveVendorsBarrelOilQuadB">
+		<property name="Extends" value="ImmersiveVendorsVendingMachineMaster"/>
+		<property name="CustomIcon" value="cntBarrelOilQuadB" />
+		<property name="Shape" value="ModelEntity"/>
+		<property name="Model" value="Entities/Industrial/barrelOilQuadBPrefab"/>
+		<property name="DescriptionKey" value="ImmersiveVendorsBarrelOilQuadBDesc"/>
+	</block>
+
+	<block name="ImmersiveVendorsBarrelRadiatedSingle00">
+		<property name="Extends" value="ImmersiveVendorsVendingMachineMaster"/>
+		<property name="CustomIcon" value="cntBarrelRadiatedSingle00" />
+		<property name="Shape" value="ModelEntity"/>
+		<property name="Model" value="Entities/Industrial/barrelRadiatedPrefab"/>
+		<property name="DescriptionKey" value="ImmersiveVendorsBarrelRadiatedSingle00Desc"/>
+	</block>
+
+	<block name="ImmersiveVendorsBarrelRadiatedSingle45">
+		<property name="Extends" value="ImmersiveVendorsVendingMachineMaster"/>
+		<property name="CustomIcon" value="cntBarrelRadiatedSingle45" />
+		<property name="Shape" value="ModelEntity"/>
+		<property name="Model" value="Entities/Industrial/barrelRadiated45Prefab"/>
+		<property name="DescriptionKey" value="ImmersiveVendorsBarrelRadiatedSingle45Desc"/>
+	</block>
+
+	<block name="ImmersiveVendorsBarrelRadiatedQuadA">
+		<property name="Extends" value="ImmersiveVendorsVendingMachineMaster"/>
+		<property name="CustomIcon" value="cntBarrelRadiatedQuadA" />
+		<property name="Shape" value="ModelEntity"/>
+		<property name="Model" value="Entities/Industrial/barrelRadiatedQuadAPrefab"/>
+		<property name="DescriptionKey" value="ImmersiveVendorsBarrelRadiatedQuadADesc"/>
+	</block>
+
+	<block name="ImmersiveVendorsBarrelRadiatedQuadB">
+		<property name="Extends" value="ImmersiveVendorsVendingMachineMaster"/>
+		<property name="CustomIcon" value="cntBarrelRadiatedQuadB" />
+		<property name="Shape" value="ModelEntity"/>
+		<property name="Model" value="Entities/Industrial/barrelRadiatedQuadBPrefab"/>
+		<property name="DescriptionKey" value="ImmersiveVendorsBarrelRadiatedQuadBDesc"/>
+	</block>
+
+	<block name="ImmersiveVendorsBarrelWhiteSingle00">
+		<property name="Extends" value="ImmersiveVendorsVendingMachineMaster"/>
+		<property name="CustomIcon" value="cntBarrelWhiteSingle00" />
+		<property name="Shape" value="ModelEntity"/>
+		<property name="Model" value="Entities/Industrial/barrelWhitePrefab"/>
+		<property name="DescriptionKey" value="ImmersiveVendorsBarrelWhiteSingle00Desc"/>
+	</block>
+
+	<block name="ImmersiveVendorsBarrelWhiteSingle45">
+		<property name="Extends" value="ImmersiveVendorsVendingMachineMaster"/>
+		<property name="CustomIcon" value="cntBarrelWhiteSingle45" />
+		<property name="Shape" value="ModelEntity"/>
+		<property name="Model" value="Entities/Industrial/barrelWhite45Prefab"/>
+		<property name="DescriptionKey" value="ImmersiveVendorsBarrelWhiteSingle45Desc"/>
+	</block>
+
+	<block name="ImmersiveVendorsBarrelWhiteQuadA">
+		<property name="Extends" value="ImmersiveVendorsVendingMachineMaster"/>
+		<property name="CustomIcon" value="cntBarrelWhiteQuadA" />
+		<property name="Shape" value="ModelEntity"/>
+		<property name="Model" value="Entities/Industrial/barrelWhiteQuadAPrefab"/>
+		<property name="DescriptionKey" value="ImmersiveVendorsBarrelWhiteQuadADesc"/>
+	</block>
+
+	<block name="ImmersiveVendorsBarrelWhiteQuadB">
+		<property name="Extends" value="ImmersiveVendorsVendingMachineMaster"/>
+		<property name="CustomIcon" value="cntBarrelPlasticQuadB" />
+		<property name="Shape" value="ModelEntity"/>
+		<property name="Model" value="Entities/Industrial/barrelWhiteQuadBPrefab"/>
+		<property name="DescriptionKey" value="ImmersiveVendorsBarrelWhiteQuadBDesc"/>
+	</block>
+
+	<block name="ImmersiveVendorsBarrelPlasticSingle00">
+		<property name="Extends" value="ImmersiveVendorsVendingMachineMaster"/>
+		<property name="CustomIcon" value="cntBarrelPlasticSingle00" />
+		<property name="Shape" value="ModelEntity"/>
+		<property name="Model" value="Entities/Industrial/barrelPlasticPrefab"/>
+		<property name="DescriptionKey" value="ImmersiveVendorsBarrelPlasticSingle00Desc"/>
+	</block>
+
+	<block name="ImmersiveVendorsBarrelPlasticSingle45">
+		<property name="Extends" value="ImmersiveVendorsVendingMachineMaster"/>
+		<property name="CustomIcon" value="cntBarrelPlasticSingle45" />
+		<property name="Shape" value="ModelEntity"/>
+		<property name="Model" value="Entities/Industrial/barrelPlastic45Prefab"/>
+		<property name="DescriptionKey" value="ImmersiveVendorsBarrelPlasticSingle45Desc"/>
+	</block>
+
+	<block name="ImmersiveVendorsBarrelPlasticQuadA">
+		<property name="Extends" value="ImmersiveVendorsVendingMachineMaster"/>
+		<property name="CustomIcon" value="cntBarrelPlasticQuadA" />
+		<property name="Shape" value="ModelEntity"/>
+		<property name="Model" value="Entities/Industrial/barrelPlasticQuadAPrefab"/>
+		<property name="DescriptionKey" value="ImmersiveVendorsBarrelPlasticQuadADesc"/>
+	</block>
+
+	<block name="ImmersiveVendorsBarrelPlasticQuadB">
+		<property name="Extends" value="ImmersiveVendorsVendingMachineMaster"/>
+		<property name="CustomIcon" value="cntBarrelPlasticQuadB" />
+		<property name="Shape" value="ModelEntity"/>
+		<property name="Model" value="Entities/Industrial/barrelPlasticQuadBPrefab"/>
+		<property name="DescriptionKey" value="ImmersiveVendorsBarrelPlasticQuadBDesc"/>
+	</block>
+
+    <block name="ImmersiveVendorsPillCase">
+        <property name="Extends" value="ImmersiveVendorsVendingMachineMaster" />
+		<property name="CustomIcon" value="cntPillCaseClosed" />
+		<property name="Shape" value="ModelEntity"/>
+		<property name="Model" value="#Entities/LootContainers?pill_case_closedPrefab.prefab"/> <property name="HandleFace" value="South"/>
+		<property name="DescriptionKey" value="ImmersiveVendorsPillCaseDesc"/>
+    </block>
+	
+    <block name="ImmersiveVendorsMedicineCabinet">
+        <property name="Extends" value="ImmersiveVendorsVendingMachineMaster" />
+		<property name="CustomIcon" value="cntMedicineCabinetClosed" />
+        <property name="Shape" value="ModelEntity"/>
+        <property name="Model" value="#Entities/LootContainers?medicine_cabinet_closedPrefab.prefab"/>
+        <property name="DescriptionKey" value="ImmersiveVendorsMedicineCabinetDesc"/>
+    </block>
+	
+    <block name="ImmersiveVendorsBookcase">
+        <property name="Extends" value="ImmersiveVendorsVendingMachineMaster" />
+		<property name="CustomIcon" value="cntBookcaseFull" />
+        <property name="DescriptionKey" value="ImmersiveVendorsBookcaseDesc"/>
+    </block>
+	
+    <block name="ImmersiveVendorsWallSafe">
+        <property name="Extends" value="ImmersiveVendorsVendingMachineMaster" />
+        <property name="CustomIcon" value="cntWallSafe" />
+		<property name="Shape" value="Ext3dModel"/> <property name="Texture" value="293"/>
+		<property name="Mesh" value="models"/>
+		<property name="Model" value="LootContainers/safe_wall" param1="main_mesh"/> <property name="HandleFace" value="South"/>
+		<property name="DescriptionKey" value="ImmersiveVendorsWallSafeDesc"/>
+    </block>
+	
+    <block name="ImmersiveVendorsCoffin">
+        <property name="Extends" value="ImmersiveVendorsVendingMachineMaster" />
+		<property name="CustomIcon" value="cntCoffin" />
+        <property name="Shape" value="Ext3dModel"/> <property name="Texture" value="293"/>
+		<property name="Mesh" value="models"/>
+		<property name="Model" value="Furniture/coffin" param1="main_mesh"/>
+		<property name="DisplayType" value="blockMulti"/>
+		<property name="MultiBlockDim" value="1,1,2"/>   >
+        <property name="DescriptionKey" value="ImmersiveVendorsCoffinDesc"/>
+    </block>
+	
+    <block name="ImmersiveVendorsGasPump">
+		<property name="Extends" value="ImmersiveVendorsVendingMachineMaster" />
+		<property name="CustomIcon" value="cntGasPump" />
+		<property name="Shape" value="Ext3dModel"/> <property name="Texture" value="293"/>
+		<property name="Mesh" value="models"/>
+		<property name="Model" value="Industrial/gas_pump" param1="main_mesh"/>
+		<property name="DisplayType" value="blockMulti"/>
+		<property name="MultiBlockDim" value="1,2,1"/>
+		<property name="DescriptionKey" value="ImmersiveVendorsGasPumpDesc"/>
+	</block>
+	
+	<block name="ImmersiveVendorspalletWhiteBagsBase">
+		<property name="Extends" value="ImmersiveVendorsVendingMachineMaster"/>
+		<property name="CustomIcon" value="palletWhiteBagsBase" />
+		<property name="Shape" value="ModelEntity"/>
+		<property name="Model" value="Entities/Industrial/pallet_bags_basePrefab"/>		
+		<property name="DescriptionKey" value="ImmersiveVendorspalletWhiteBagsBaseDesc"/>
+	</block>
+	
+	<block name="ImmersiveVendorspalletWhiteBagsTile">
+		<property name="Extends" value="ImmersiveVendorsVendingMachineMaster"/>
+		<property name="CustomIcon" value="palletWhiteBagsTile" />
+		<property name="Shape" value="ModelEntity"/>
+		<property name="Model" value="Entities/Industrial/pallet_bags_tilePrefab"/>
+		<property name="DescriptionKey" value="ImmersiveVendorspalletWhiteBagsTileDesc"/>
+	</block>
+	
+	<block name="ImmersiveVendorspalletWhiteBagsTop">
+		<property name="Extends" value="ImmersiveVendorsVendingMachineMaster"/>
+		<property name="CustomIcon" value="palletWhiteBagsTop" />
+		<property name="Shape" value="ModelEntity"/>
+		<property name="Model" value="Entities/Industrial/pallet_bags_topPrefab"/>
+		<property name="DescriptionKey" value="ImmersiveVendorspalletWhiteBagsTopDesc"/>
+	</block>
+	
+	<block name="ImmersiveVendorspalletWhiteBagsPartial1">
+		<property name="Extends" value="ImmersiveVendorsVendingMachineMaster"/>
+		<property name="CustomIcon" value="palletWhiteBagsPartial1" />
+		<property name="Shape" value="ModelEntity"/>
+		<property name="Model" value="Entities/Industrial/pallet_bags_brokePrefab"/>
+		<property name="DescriptionKey" value="ImmersiveVendorspalletWhiteBagsPartial1Desc"/>
+	</block>
+	
+	<block name="ImmersiveVendorspalletWhiteBagsPartial2">
+		<property name="Extends" value="ImmersiveVendorsVendingMachineMaster"/>
+		<property name="CustomIcon" value="palletWhiteBagsPartial2" />
+		<property name="Shape" value="ModelEntity"/>
+		<property name="Model" value="Entities/Industrial/pallet_bags_broke2Prefab"/>
+		<property name="DescriptionKey" value="ImmersiveVendorspalletWhiteBagsPartial2Desc"/>
+	</block>
+	
+	<block name="ImmersiveVendorspalletWhiteBagsLoose">
+		<property name="Extends" value="ImmersiveVendorsVendingMachineMaster"/>
+		<property name="CustomIcon" value="palletWhiteBagsLoose" />
+		<property name="Shape" value="ModelEntity"/>
+		<property name="Model" value="Entities/Industrial/pallet_bags_loosePrefab"/>
+		<property name="DescriptionKey" value="ImmersiveVendorspalletWhiteBagsLooseDesc"/>
+	</block>
+	
+	<block name="ImmersiveVendorspalletBrownBoxesBase">
+		<property name="Extends" value="ImmersiveVendorsVendingMachineMaster"/>
+		<property name="CustomIcon" value="palletBrownBoxesBase" />
+		<property name="Shape" value="ModelEntity"/>
+		<property name="Model" value="Entities/Industrial/pallet_boxes_basePrefab"/>
+		<property name="DescriptionKey" value="ImmersiveVendorspalletBrownBoxesBaseDesc"/>
+	</block>
+	
+	<block name="ImmersiveVendorspalletBrownBoxesTile">
+		<property name="Extends" value="ImmersiveVendorsVendingMachineMaster"/>
+		<property name="CustomIcon" value="palletBrownBoxesTile" />
+		<property name="Shape" value="ModelEntity"/>
+		<property name="Model" value="Entities/Industrial/pallet_boxes_tilePrefab"/>
+		<property name="DescriptionKey" value="ImmersiveVendorspalletBrownBoxesTileDesc"/>
+	</block>
+	
+	<block name="ImmersiveVendorspalletBrownBoxesTop">
+		<property name="Extends" value="ImmersiveVendorsVendingMachineMaster"/>
+		<property name="CustomIcon" value="palletBrownBoxesTop" />
+		<property name="Shape" value="ModelEntity"/>
+		<property name="Model" value="Entities/Industrial/pallet_boxes_topPrefab"/>
+		<property name="DescriptionKey" value="ImmersiveVendorspalletBrownBoxesTopDesc"/>
+	</block>
+	
+	<block name="ImmersiveVendorspalletBrownBoxesLoose">
+		<property name="Extends" value="ImmersiveVendorsVendingMachineMaster"/>
+		<property name="CustomIcon" value="palletBrownBoxesLoose" />
+		<property name="Shape" value="ModelEntity"/>
+		<property name="Model" value="Entities/Industrial/pallet_boxes_loosePrefab"/>
+		<property name="DescriptionKey" value="ImmersiveVendorspalletBrownBoxesLooseDesc"/>
+	</block>
+	
+	<block name="ImmersiveVendorspalletBricksBase">
+		<property name="Extends" value="ImmersiveVendorsVendingMachineMaster"/>
+		<property name="CustomIcon" value="palletBricksBase" />
+		<property name="Shape" value="ModelEntity"/>
+		<property name="Model" value="Entities/Industrial/pallet_bricks_basePrefab"/>
+		<property name="DescriptionKey" value="ImmersiveVendorspalletBricksBaseDesc"/>
+	</block>
+	
+	<block name="ImmersiveVendorspalletBricksTile">
+		<property name="Extends" value="ImmersiveVendorsVendingMachineMaster"/>
+		<property name="CustomIcon" value="palletBricksTile" />
+		<property name="Shape" value="ModelEntity"/>
+		<property name="Model" value="Entities/Industrial/pallet_bricks_tilePrefab"/>
+		<property name="DescriptionKey" value="ImmersiveVendorspalletBricksTileDesc"/>
+	</block>
+	
+	<block name="ImmersiveVendorspalletBricksTop">
+		<property name="Extends" value="ImmersiveVendorsVendingMachineMaster"/>
+		<property name="CustomIcon" value="palletBricksTop" />
+		<property name="Shape" value="ModelEntity"/>
+		<property name="Model" value="Entities/Industrial/pallet_bricks_topPrefab"/>
+		<property name="DescriptionKey" value="ImmersiveVendorspalletBricksTopDesc"/>
+	</block>
+	
+	<block name="ImmersiveVendorspalletBricksPartial1">
+		<property name="Extends" value="ImmersiveVendorsVendingMachineMaster"/>
+		<property name="CustomIcon" value="palletBricksPartial1" />
+		<property name="Shape" value="ModelEntity"/>
+		<property name="Model" value="Entities/Industrial/pallet_bricks_brokePrefab"/>
+		<property name="DescriptionKey" value="ImmersiveVendorspalletBricksPartial1Desc"/>
+	</block>
+	
+	<block name="ImmersiveVendorspalletBricksPartial2">
+		<property name="Extends" value="ImmersiveVendorsVendingMachineMaster"/>
+		<property name="CustomIcon" value="palletBricksPartial2" />
+		<property name="Shape" value="ModelEntity"/>
+		<property name="Model" value="Entities/Industrial/pallet_bricks_broke2Prefab"/>
+		<property name="DescriptionKey" value="ImmersiveVendorspalletBricksPartial2Desc"/>
+	</block>
+	
+	<block name="ImmersiveVendorspalletBricksLoose">
+		<property name="Extends" value="ImmersiveVendorsVendingMachineMaster"/>
+		<property name="CustomIcon" value="palletBricksLoose" />
+		<property name="Shape" value="ModelEntity"/>
+		<property name="Model" value="Entities/Industrial/pallet_bricks_loosePrefab"/>
+		<property name="DescriptionKey" value="ImmersiveVendorspalletBricksLooseDesc"/>
+	</block>
+	
+	<block name="ImmersiveVendorspalletBlueTarpBase">
+		<property name="Extends" value="ImmersiveVendorsVendingMachineMaster"/>
+		<property name="CustomIcon" value="palletBlueTarpBase" />
+		<property name="Shape" value="ModelEntity"/>
+		<property name="Model" value="Entities/Industrial/pallet_tarp_basePrefab"/>
+		<property name="DescriptionKey" value="ImmersiveVendorspalletBlueTarpBaseDesc"/>
+	</block>
+	
+	<block name="ImmersiveVendorspalletBlueTarpTile">
+		<property name="Extends" value="ImmersiveVendorsVendingMachineMaster"/>
+		<property name="CustomIcon" value="palletBlueTarpTile" />
+		<property name="Shape" value="ModelEntity"/>
+		<property name="Model" value="Entities/Industrial/pallet_tarp_tilePrefab"/>
+		<property name="DescriptionKey" value="ImmersiveVendorspalletBlueTarpTileDesc"/>
+	</block>
+	
+	<block name="ImmersiveVendorsmodularFireWoodStackA">
+		<property name="Extends" value="ImmersiveVendorsVendingMachineMaster"/>
+		<property name="CustomIcon" value="modularFireWoodStackA" />
+		<property name="Shape" value="ModelEntity"/>
+		<property name="Model" value="Entities/OutdoorDecor/modularFireWoodStackAPrefab"/>
+		<property name="DescriptionKey" value="ImmersiveVendorsmodularFireWoodStackADesc"/>
+	</block>
+	
+	<block name="ImmersiveVendorsmodularFireWoodStackB">
+		<property name="Extends" value="ImmersiveVendorsVendingMachineMaster"/>
+		<property name="CustomIcon" value="modularFireWoodStackB" />
+		<property name="Shape" value="ModelEntity"/>
+		<property name="Model" value="Entities/OutdoorDecor/modularFireWoodStackBPrefab"/>
+		<property name="DescriptionKey" value="ImmersiveVendorsmodularFireWoodStackBDesc"/>
+	</block>
+	
+	<block name="ImmersiveVendorsmodularFireWoodStackC">
+		<property name="Extends" value="ImmersiveVendorsVendingMachineMaster"/>
+		<property name="CustomIcon" value="modularFireWoodStackC" />
+		<property name="Shape" value="ModelEntity"/>
+		<property name="Model" value="Entities/OutdoorDecor/modularFireWoodStackCPrefab"/>
+		<property name="DescriptionKey" value="ImmersiveVendorsmodularFireWoodStackCDesc"/>
+	</block>
+	
+	<block name="ImmersiveVendorsAmmoPileSmall">
+		<property name="Extends" value="ImmersiveVendorsVendingMachineMaster"/>
+		<property name="CustomIcon" value="cntAmmoPileSmall"/>
+		<property name="Shape" value="ModelEntity"/>
+		<property name="Model" value="#Entities/LootContainers?AmmoPiles_SmallPrefab.prefab"/>>	
+		<property name="DescriptionKey" value="ImmersiveVendorsAmmoPileSmallDesc"/>	
+	</block>
+
+	<block name="ImmersiveVendorsAmmoPileMedium">
+		<property name="Extends" value="ImmersiveVendorsVendingMachineMaster"/>
+		<property name="CustomIcon" value="cntAmmoPileMedium"/>
+		<property name="Shape" value="ModelEntity"/>
+		<property name="Model" value="#Entities/LootContainers?AmmoPiles_MediumPrefab.prefab"/>
+		<property name="DescriptionKey" value="ImmersiveVendorsAmmoPileMediumDesc"/>		
+	</block>
+
+	<block name="ImmersiveVendorsAmmoPileLarge">
+		<property name="Extends" value="ImmersiveVendorsVendingMachineMaster"/>
+		<property name="CustomIcon" value="cntAmmoPileLarge"/>
+		<property name="Shape" value="ModelEntity"/>
+		<property name="Model" value="#Entities/LootContainers?AmmoPiles_LargePrefab.prefab"/>
+		<property name="DisplayType" value="blockMulti"/>
+		<property name="MultiBlockDim" value="2,1,1"/>
+		<property name="DescriptionKey" value="ImmersiveVendorsAmmoPileLargeDesc"/>
+	</block>
+
+	<block name="ImmersiveVendorsMedicalPileSmall">
+		<property name="Extends" value="ImmersiveVendorsVendingMachineMaster"/>
+		<property name="CustomIcon" value="cntMedicalPileSmall"/>
+		<property name="Shape" value="ModelEntity"/>
+		<property name="Model" value="Entities/Crafting/ChemSetBPrefab"/>
+		<property name="DescriptionKey" value="ImmersiveVendorsMedicalPileSmallDesc"/>
+	</block>
+
+	<block name="ImmersiveVendorsMedicalPileMedium">
+		<property name="Extends" value="ImmersiveVendorsVendingMachineMaster"/>
+		<property name="CustomIcon" value="cntMedicalPileMedium"/>
+		<property name="Shape" value="ModelEntity"/>
+		<property name="Model" value="Entities/Crafting/ChemSetCPrefab"/>
+		<property name="DescriptionKey" value="ImmersiveVendorsMedicalPileMediumDesc"/>
+	</block>
+
+	<block name="ImmersiveVendorsMedicalPileLarge">
+		<property name="Extends" value="ImmersiveVendorsVendingMachineMaster"/>
+		<property name="CustomIcon" value="cntMedicalPileLarge"/>
+		<property name="Shape" value="ModelEntity"/>
+		<property name="Model" value="Entities/Crafting/ChemSetDPrefab"/>
+		<property name="DescriptionKey" value="ImmersiveVendorsMedicalPileLargeDesc"/>
+	</block>
+
+	<block name="ImmersiveVendorsMedicLootPileA">
+		<property name="Extends" value="ImmersiveVendorsVendingMachineMaster"/>
+		<property name="CustomIcon" value="cntMedicLootPileA"/>
+		<property name="Shape" value="ModelEntity"/>
+		<property name="Model" value="#Entities/LootContainers?medic_loot_pile_APrefab.prefab"/>
+		<property name="DescriptionKey" value="ImmersiveVendorsMedicLootPileADesc"/>
+	</block>
+
+	<block name="ImmersiveVendorsMedicLootPileB">
+		<property name="Extends" value="ImmersiveVendorsVendingMachineMaster"/>
+		<property name="CustomIcon" value="cntMedicLootPileB"/>
+		<property name="Shape" value="ModelEntity"/>
+		<property name="Model" value="#Entities/LootContainers?medic_loot_pile_BPrefab.prefab"/>		
+		<property name="DescriptionKey" value="ImmersiveVendorsMedicLootPileBDesc"/>	
+	</block>
+	<block name="ImmersiveVendorsSpeaker">
+		<property name="Extends" value="ImmersiveVendorsVendingMachineMaster"/>
+		<property name="CustomIcon" value="speaker"/>
+		<property name="Shape" value="ModelEntity"/>
+		<property name="Model" value="Entities/Electrical/loudspeakerPrefab"/>
+		<property name="DescriptionKey" value="ImmersiveVendorsSpeaker"/>	
+	</block>
+</append>
+</ImmersiveVendors>

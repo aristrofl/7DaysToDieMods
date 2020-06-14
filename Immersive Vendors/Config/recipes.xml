@@ -1,0 +1,7 @@
+<ImmersiveVendors>
+<append xpath="/recipes">
+    <recipe name="ImmersiveVendorsVendingMachineHelper" count="1" craft_area="workbench">
+		<ingredient name="cntVendingMachine" count="1"/>
+	</recipe>
+</append>
+</ImmersiveVendors>

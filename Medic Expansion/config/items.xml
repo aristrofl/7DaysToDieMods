@@ -106,6 +106,25 @@
 		<triggered_effect trigger="onSelfDamagedOther" action="AddBuff" target="other" buff="buffProcessConsumables"/>
 		<triggered_effect trigger="onSelfDamagedOther" action="RemoveBuff" target="other" buff="buffInjuryBleeding"/>
 	</effect_group>
+	<effect_group tiered="false">
+		<!-- medical XP secondary action gains -->
+		<triggered_effect trigger="onSelfDamagedOther" action="GiveExp" exp="10"/>
+		<triggered_effect trigger="onSelfDamagedOther" action="GiveExp" exp="2">
+			<requirement name="ProgressionLevel" progression_name="perkPhysician" operation="Equals" value="1"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfDamagedOther" action="GiveExp" exp="4">
+			<requirement name="ProgressionLevel" progression_name="perkPhysician" operation="Equals" value="2"/>
+		</triggered_effect>
+				<triggered_effect trigger="onSelfDamagedOther" action="GiveExp" exp="6">
+			<requirement name="ProgressionLevel" progression_name="perkPhysician" operation="Equals" value="3"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfDamagedOther" action="GiveExp" exp="8">
+			<requirement name="ProgressionLevel" progression_name="perkPhysician" operation="Equals" value="4"/>
+		</triggered_effect>
+				<triggered_effect trigger="onSelfDamagedOther" action="GiveExp" exp="10">
+			<requirement name="ProgressionLevel" progression_name="perkPhysician" operation="Equals" value="5"/>
+		</triggered_effect>
+	</effect_group>
 </item>
 <item name="MedXpansionMedicAmmoHealMedium">
 	<property name="Meshfile" value="#Other/Items?Tools/nailProjectilePrefab.prefab"/>
@@ -150,6 +169,25 @@
 		<triggered_effect trigger="onSelfDamagedOther" action="AddBuff" target="other" buff="buffProcessConsumables"/>
 		<triggered_effect trigger="onSelfDamagedOther" action="RemoveBuff" target="other" buff="buffInjuryBleeding"/>
 	</effect_group>
+	<effect_group tiered="false">
+		<!-- medical XP secondary action gains -->
+		<triggered_effect trigger="onSelfDamagedOther" action="GiveExp" exp="100"/>
+		<triggered_effect trigger="onSelfDamagedOther" action="GiveExp" exp="20">
+			<requirement name="ProgressionLevel" progression_name="perkPhysician" operation="Equals" value="1"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfDamagedOther" action="GiveExp" exp="40">
+			<requirement name="ProgressionLevel" progression_name="perkPhysician" operation="Equals" value="2"/>
+		</triggered_effect>
+				<triggered_effect trigger="onSelfDamagedOther" action="GiveExp" exp="60">
+			<requirement name="ProgressionLevel" progression_name="perkPhysician" operation="Equals" value="3"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfDamagedOther" action="GiveExp" exp="80">
+			<requirement name="ProgressionLevel" progression_name="perkPhysician" operation="Equals" value="4"/>
+		</triggered_effect>
+				<triggered_effect trigger="onSelfDamagedOther" action="GiveExp" exp="100">
+			<requirement name="ProgressionLevel" progression_name="perkPhysician" operation="Equals" value="5"/>
+		</triggered_effect>
+	</effect_group>
 </item>
 <item name="MedXpansionMedicAmmoHealLarge">
 	<property name="Meshfile" value="#Other/Items?Tools/nailProjectilePrefab.prefab"/>
@@ -193,6 +231,25 @@
 
 		<triggered_effect trigger="onSelfDamagedOther" action="AddBuff" target="other" buff="buffProcessConsumables"/>
 		<triggered_effect trigger="onSelfDamagedOther" action="RemoveBuff" target="other" buff="buffInjuryBleeding"/>
+	</effect_group>
+		<effect_group tiered="false">
+		<!-- medical XP secondary action gains -->
+		<triggered_effect trigger="onSelfDamagedOther" action="GiveExp" exp="300"/>
+		<triggered_effect trigger="onSelfDamagedOther" action="GiveExp" exp="60">
+			<requirement name="ProgressionLevel" progression_name="perkPhysician" operation="Equals" value="1"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfDamagedOther" action="GiveExp" exp="120">
+			<requirement name="ProgressionLevel" progression_name="perkPhysician" operation="Equals" value="2"/>
+		</triggered_effect>
+				<triggered_effect trigger="onSelfDamagedOther" action="GiveExp" exp="180">
+			<requirement name="ProgressionLevel" progression_name="perkPhysician" operation="Equals" value="3"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfDamagedOther" action="GiveExp" exp="240">
+			<requirement name="ProgressionLevel" progression_name="perkPhysician" operation="Equals" value="4"/>
+		</triggered_effect>
+				<triggered_effect trigger="onSelfDamagedOther" action="GiveExp" exp="300">
+			<requirement name="ProgressionLevel" progression_name="perkPhysician" operation="Equals" value="5"/>
+		</triggered_effect>
 	</effect_group>
 </item>
 <item name="MedXpansionMedicAmmoSleep">

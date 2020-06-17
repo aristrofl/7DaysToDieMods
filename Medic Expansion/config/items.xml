@@ -1,0 +1,262 @@
+<MedXpansion>
+<append xpath="/items">
+<item name="MedXpansionMedicGun"> <!-- T3 Tools -->
+	<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,gun,barrelAttachments,sideAttachments,selfLoading,magazine"/>
+	<property name="DisplayType" value="meleeRepairTool"/>
+	<property name="CustomIcon" value="gunToolNailgun"/>
+	<property name="DescriptionKey" value="MedXpansionMedicGunDesc"/>
+	<property name="TintColor" value="255,0,0"/>
+	<property name="CustomIconTint" value="255,0,0"/>
+	<property name="HoldType" value="37"/>
+	<property name="Meshfile" value="#Other/Items?Tools/nailgunPrefab.prefab"/>
+	<property name="Material" value="MmechanicalParts"/> <property name="Weight" value="10"/>
+	<property name="RepairTools" value="resourceRepairKit"/>
+	<property name="DegradationBreaksAfter" value="false"/>
+	<property name="SoundJammed" value="weapon_jam"/>
+	<property name="CrosshairUpAfterShot" value="true"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="UnlockedBy" value="perkYeahScience"/>
+	<property name="ShowQuality" value="true"/>
+	<property name="LightSource" value="lightSource"/> <!-- Start: Needed for the attachment flashlight -->
+	<property name="ActivateObject" value="Attachments/flashlight/lightSource"/>
+	<property name="AttachmentFlashlight" value="meleeToolFlashlight02"/> <!-- End: Needed for the attachment flashlight -->
+	<property class="Action0">
+		<property name="Class" value="Launcher"/>
+		<property name="Hitmask_override" value="Arrow"/>
+		<property name="Delay" value=".3"/> <!-- obsolete if rounds per minute exists -->
+		<property name="Magazine_items" value="MedXpansionMedicAmmoHealSmall, MedXpansionMedicAmmoHealMedium, MedXpansionMedicAmmoHealLarge, MedXpansionMedicAmmoSleep, MedXpansionMedicAmmoBuff"/>
+		<property name="Instantiate_on_load" value="false"/>
+		<property name="Reload_time" value="2"/>
+		<property name="Sound_start" value="nailgun_fire"/>
+		<property name="Particles_muzzle_fire" value="nailgunfire"/>
+	<!-- <property name="Particles_muzzle_smoke" value="nozzlesmoke"/> -->
+		<property name="Sound_repeat" value=""/>
+		<property name="Sound_end" value=""/>
+		<property name="Sound_empty" value="dryfire"/>
+		<property name="Sound_reload" value="nailgun_reload"/>
+	</property>
+	<property name="Group" value="Tools/Traps"/>
+	<property name="RepairExpMultiplier" value="10.8"/>
+	<property name="EconomicValue" value="1000"/>
+	<effect_group name="MedXpansionMedicGun"> <!-- gunToolNailgun -->
+		<passive_effect name="DamageFalloffRange" operation="base_set" value="0"/>
+		<passive_effect name="DamageFalloffRange" operation="perc_add" value="0"/> <!-- random effective rng -->
+		<passive_effect name="MaxRange" operation="base_set" value="10"/>
+
+		<passive_effect name="SpreadDegreesVertical" operation="base_set" value="1.3"/>
+		<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="1.3"/>
+		<passive_effect name="SpreadMultiplierAiming" operation="base_set" value=".4"/>
+		<passive_effect name="SpreadMultiplierCrouching" operation="base_set" value=".8"/>
+		<passive_effect name="SpreadMultiplierWalking" operation="base_set" value="1.5"/>
+		<passive_effect name="SpreadMultiplierRunning" operation="base_set" value="2.2"/>
+		<passive_effect name="IncrementalSpreadMultiplier" operation="base_set" value="2"/>
+		<passive_effect name="WeaponHandling" operation="base_set" value=".7"/> <!-- crosshair reset speed -->
+		<passive_effect name="RoundsPerMinute" operation="base_set" value="200"/>
+		<passive_effect name="BurstRoundCount" operation="base_set" value="1"/>
+		<passive_effect name="MagazineSize" operation="base_set" value="10"/>
+		<passive_effect name="KickDegreesVerticalMin" operation="base_set" value="-.7"/>
+		<passive_effect name="KickDegreesVerticalMax" operation="base_set" value=".7"/>
+		<passive_effect name="KickDegreesHorizontalMin" operation="base_set" value="-.6"/>
+		<passive_effect name="KickDegreesHorizontalMax" operation="base_set" value=".6"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="1000" tags="nailgun"/>
+		<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="nailgun"/>
+		<passive_effect name="ModSlots" operation="base_set" value="0,5" tier="1,6"/>
+	</effect_group>
+</item>
+<item name="MedXpansionMedicAmmoHealSmall">
+	<property name="Meshfile" value="#Other/Items?Tools/nailProjectilePrefab.prefab"/>
+	<property name="HoldType" value="45"/>
+	<property name="HandMeshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
+	<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+	<property name="CustomIcon" value="MedXpansionMedicAmmoHealSmall"/>
+	<property name="Material" value="MresourceScrapIron"/>
+	<property name="Stacknumber" value="100"/> <!-- STK resource -->
+	<property name="EconomicValue" value="20"/>
+	<property name="EconomicBundleSize" value="1"/>
+	<property name="Group" value="Resources,Ammo/Weapons"/>
+	<property name="UnlockedBy" value="perkYeahScience"/>
+	<property class="Action1">
+		<property name="Class" value="Projectile"/>
+		<property name="Explosion.ParticleIndex" value="0"/>
+		<!-- no expl. -->
+		<property name="FlyTime" value="1"/>
+		<property name="LifeTime" value=".75"/>
+	</property>
+	<effect_group name="MedXpansionMedicAmmoHealSmall" tiered="false">
+		<passive_effect name="EntityDamage" operation="base_set" value="0"/>
+		<passive_effect name="BlockDamage" operation="base_set" value="0"/>
+		<passive_effect name="ProjectileVelocity" operation="base_set" value="20"/>
+		<passive_effect name="ProjectileStickChance" operation="perc_set" value="0"/>
+		<triggered_effect trigger="onSelfDamagedOther" action="ModifyCVar" target="other" cvar="maxHealthAmount" operation="add" value="3"/> <!-- X -->
+		<triggered_effect trigger="onSelfDamagedOther" action="ModifyCVar" target="other" cvar="maxHealthIncrease" operation="set" value="1.25">
+			<requirement name="CVarCompare" cvar="maxHealthIncrease" operation="Equals" value="1.25"/> </triggered_effect>
+		<triggered_effect trigger="onSelfDamagedOther" action="ModifyCVar" target="other" cvar="maxHealthIncrease" operation="set" value="1.5">
+			<requirement name="CVarCompare" cvar="maxHealthIncrease" operation="Equals" value="1.5"/> </triggered_effect>
+		<triggered_effect trigger="onSelfDamagedOther" action="ModifyCVar" target="other" cvar="maxHealthIncrease" operation="set" value="2">
+			<requirement name="CVarCompare" cvar="maxHealthIncrease" operation="Equals" value="2"/> </triggered_effect>
+
+		<triggered_effect trigger="onSelfDamagedOther" action="ModifyCVar" target="other" cvar="medicalHealthAmount" operation="add" value="5"/> <!-- X -->
+		<triggered_effect trigger="onSelfDamagedOther" action="ModifyCVar" target="other" cvar="healthIncrease" operation="set" value="2.5">
+			<requirement name="CVarCompare" cvar="healthIncrease" operation="Equals" value="2.5"/> </triggered_effect>
+		<triggered_effect trigger="onSelfDamagedOther" action="ModifyCVar" target="other" cvar="healthIncrease" operation="set" value="3">
+			<requirement name="CVarCompare" cvar="healthIncrease" operation="Equals" value="3"/> </triggered_effect>
+		<triggered_effect trigger="onSelfDamagedOther" action="ModifyCVar" target="other" cvar="healthIncrease" operation="set" value="4">
+			<requirement name="CVarCompare" cvar="healthIncrease" operation="Equals" value="4"/> </triggered_effect>
+
+		<triggered_effect trigger="onSelfDamagedOther" action="AddBuff" target="other" buff="buffProcessConsumables"/>
+		<triggered_effect trigger="onSelfDamagedOther" action="RemoveBuff" target="other" buff="buffInjuryBleeding"/>
+	</effect_group>
+</item>
+<item name="MedXpansionMedicAmmoHealMedium">
+	<property name="Meshfile" value="#Other/Items?Tools/nailProjectilePrefab.prefab"/>
+	<property name="HoldType" value="45"/>
+	<property name="HandMeshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
+	<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+	<property name="CustomIcon" value="MedXpansionMedicAmmoHealMedium"/>
+	<property name="Material" value="MresourceScrapIron"/>
+	<property name="Stacknumber" value="100"/> <!-- STK resource -->
+	<property name="EconomicValue" value="50"/>
+	<property name="EconomicBundleSize" value="1"/>
+	<property name="Group" value="Resources,Ammo/Weapons"/>
+	<property name="UnlockedBy" value="perkYeahScience"/>
+	<property class="Action1">
+		<property name="Class" value="Projectile"/>
+		<property name="Explosion.ParticleIndex" value="0"/>
+		<!-- no expl. -->
+		<property name="FlyTime" value="1"/>
+		<property name="LifeTime" value=".75"/>
+	</property>
+	<effect_group name="MedXpansionMedicAmmoHealMedium" tiered="false">
+		<passive_effect name="EntityDamage" operation="base_set" value="0"/>
+		<passive_effect name="BlockDamage" operation="base_set" value="0"/>
+		<passive_effect name="ProjectileVelocity" operation="base_set" value="20"/>
+		<passive_effect name="ProjectileStickChance" operation="perc_set" value="0"/>
+		<triggered_effect trigger="onSelfDamagedOther" action="ModifyCVar" target="other" cvar="maxHealthAmount" operation="add" value="25"/> <!-- X -->
+		<triggered_effect trigger="onSelfDamagedOther" action="ModifyCVar" target="other" cvar="maxHealthIncrease" operation="set" value="1.25">
+			<requirement name="CVarCompare" cvar="maxHealthIncrease" operation="Equals" value="1.25"/> </triggered_effect>
+		<triggered_effect trigger="onSelfDamagedOther" action="ModifyCVar" target="other" cvar="maxHealthIncrease" operation="set" value="1.5">
+			<requirement name="CVarCompare" cvar="maxHealthIncrease" operation="Equals" value="1.5"/> </triggered_effect>
+		<triggered_effect trigger="onSelfDamagedOther" action="ModifyCVar" target="other" cvar="maxHealthIncrease" operation="set" value="2">
+			<requirement name="CVarCompare" cvar="maxHealthIncrease" operation="Equals" value="2"/> </triggered_effect>
+
+		<triggered_effect trigger="onSelfDamagedOther" action="ModifyCVar" target="other" cvar="medicalHealthAmount" operation="add" value="30"/> <!-- X -->
+		<triggered_effect trigger="onSelfDamagedOther" action="ModifyCVar" target="other" cvar="healthIncrease" operation="set" value="2.5">
+			<requirement name="CVarCompare" cvar="healthIncrease" operation="Equals" value="2.5"/> </triggered_effect>
+		<triggered_effect trigger="onSelfDamagedOther" action="ModifyCVar" target="other" cvar="healthIncrease" operation="set" value="3">
+			<requirement name="CVarCompare" cvar="healthIncrease" operation="Equals" value="3"/> </triggered_effect>
+		<triggered_effect trigger="onSelfDamagedOther" action="ModifyCVar" target="other" cvar="healthIncrease" operation="set" value="4">
+			<requirement name="CVarCompare" cvar="healthIncrease" operation="Equals" value="4"/> </triggered_effect>
+
+		<triggered_effect trigger="onSelfDamagedOther" action="AddBuff" target="other" buff="buffProcessConsumables"/>
+		<triggered_effect trigger="onSelfDamagedOther" action="RemoveBuff" target="other" buff="buffInjuryBleeding"/>
+	</effect_group>
+</item>
+<item name="MedXpansionMedicAmmoHealLarge">
+	<property name="Meshfile" value="#Other/Items?Tools/nailProjectilePrefab.prefab"/>
+	<property name="HoldType" value="45"/>
+	<property name="HandMeshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
+	<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+	<property name="CustomIcon" value="MedXpansionMedicAmmoHealLarge"/>
+	<property name="Material" value="MresourceScrapIron"/>
+	<property name="Stacknumber" value="100"/> <!-- STK resource -->
+	<property name="EconomicValue" value="200"/>
+	<property name="EconomicBundleSize" value="1"/>
+	<property name="Group" value="Resources,Ammo/Weapons"/>
+	<property name="UnlockedBy" value="perkYeahScience"/>
+	<property class="Action1">
+		<property name="Class" value="Projectile"/>
+		<property name="Explosion.ParticleIndex" value="0"/>
+		<!-- no expl. -->
+		<property name="FlyTime" value="1"/>
+		<property name="LifeTime" value=".75"/>
+	</property>
+	<effect_group name="MedXpansionMedicAmmoHealLarge" tiered="false">
+		<passive_effect name="EntityDamage" operation="base_set" value="0"/>
+		<passive_effect name="BlockDamage" operation="base_set" value="0"/>
+		<passive_effect name="ProjectileVelocity" operation="base_set" value="20"/>
+		<passive_effect name="ProjectileStickChance" operation="perc_set" value="0"/>
+		<triggered_effect trigger="onSelfDamagedOther" action="ModifyCVar" target="other" cvar="maxHealthAmount" operation="add" value="90"/> <!-- X -->
+		<triggered_effect trigger="onSelfDamagedOther" action="ModifyCVar" target="other" cvar="maxHealthIncrease" operation="set" value="1.25">
+			<requirement name="CVarCompare" cvar="maxHealthIncrease" operation="Equals" value="1.25"/> </triggered_effect>
+		<triggered_effect trigger="onSelfDamagedOther" action="ModifyCVar" target="other" cvar="maxHealthIncrease" operation="set" value="1.5">
+			<requirement name="CVarCompare" cvar="maxHealthIncrease" operation="Equals" value="1.5"/> </triggered_effect>
+		<triggered_effect trigger="onSelfDamagedOther" action="ModifyCVar" target="other" cvar="maxHealthIncrease" operation="set" value="2">
+			<requirement name="CVarCompare" cvar="maxHealthIncrease" operation="Equals" value="2"/> </triggered_effect>
+
+		<triggered_effect trigger="onSelfDamagedOther" action="ModifyCVar" target="other" cvar="medicalHealthAmount" operation="add" value="180"/> <!-- X -->
+		<triggered_effect trigger="onSelfDamagedOther" action="ModifyCVar" target="other" cvar="healthIncrease" operation="set" value="2.5">
+			<requirement name="CVarCompare" cvar="healthIncrease" operation="Equals" value="2.5"/> </triggered_effect>
+		<triggered_effect trigger="onSelfDamagedOther" action="ModifyCVar" target="other" cvar="healthIncrease" operation="set" value="3">
+			<requirement name="CVarCompare" cvar="healthIncrease" operation="Equals" value="3"/> </triggered_effect>
+		<triggered_effect trigger="onSelfDamagedOther" action="ModifyCVar" target="other" cvar="healthIncrease" operation="set" value="4">
+			<requirement name="CVarCompare" cvar="healthIncrease" operation="Equals" value="4"/> </triggered_effect>
+
+		<triggered_effect trigger="onSelfDamagedOther" action="AddBuff" target="other" buff="buffProcessConsumables"/>
+		<triggered_effect trigger="onSelfDamagedOther" action="RemoveBuff" target="other" buff="buffInjuryBleeding"/>
+	</effect_group>
+</item>
+<item name="MedXpansionMedicAmmoSleep">
+	<property name="Meshfile" value="#Other/Items?Tools/nailProjectilePrefab.prefab"/>
+	<property name="HoldType" value="45"/>
+	<property name="HandMeshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
+	<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+	<property name="CustomIcon" value="MedXpansionMedicAmmoSleep"/>
+	<property name="Material" value="MresourceScrapIron"/>
+	<property name="Stacknumber" value="100"/> <!-- STK resource -->
+	<property name="EconomicValue" value="100"/>
+	<property name="EconomicBundleSize" value="1"/>
+	<property name="Group" value="Resources,Ammo/Weapons"/>
+	<property name="UnlockedBy" value="perkYeahScience"/>
+	<property class="Action1">
+		<property name="Class" value="Projectile"/>
+		<property name="Explosion.ParticleIndex" value="0"/>
+		<!-- no expl. -->
+		<property name="FlyTime" value="1"/>
+		<property name="LifeTime" value=".75"/>
+	</property>
+	<effect_group name="MedXpansionMedicAmmoSleep" tiered="false"> <!-- nail -->
+		<passive_effect name="EntityDamage" operation="base_set" value="0"/>
+		<passive_effect name="BlockDamage" operation="base_set" value="0"/>
+		<passive_effect name="ProjectileVelocity" operation="base_set" value="20"/>
+		<passive_effect name="ProjectileStickChance" operation="perc_set" value="0"/>
+		<triggered_effect trigger="onSelfDamagedOther" action="AddBuff" target="other" buff="buffInjuryStunned02"/>
+	</effect_group>
+</item>
+
+<item name="MedXpansionMedicAmmoBuff">
+	<property name="Meshfile" value="#Other/Items?Tools/nailProjectilePrefab.prefab"/>
+	<property name="HoldType" value="45"/>
+	<property name="HandMeshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
+	<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+	<property name="CustomIcon" value="MedXpansionMedicAmmoBuff"/>
+	<property name="Material" value="MresourceScrapIron"/>
+	<property name="Stacknumber" value="100"/> <!-- STK resource -->
+	<property name="EconomicValue" value="500"/>
+	<property name="EconomicBundleSize" value="1"/>
+	<property name="Group" value="Resources,Ammo/Weapons"/>
+	<property name="UnlockedBy" value="perkYeahScience"/>
+	<property class="Action1">
+		<property name="Class" value="Projectile"/>
+		<property name="Explosion.ParticleIndex" value="0"/>
+		<!-- no expl. -->
+		<property name="FlyTime" value="1"/>
+		<property name="LifeTime" value=".75"/>
+	</property>
+	<effect_group name="MedXpansionMedicAmmoBuff" tiered="false">
+		<requirement name="EntityTagCompare" target="other" tags="player"/>
+			<passive_effect name="EntityDamage" operation="base_set" value="0"/>
+			<passive_effect name="BlockDamage" operation="base_set" value="0"/>
+			<passive_effect name="ProjectileVelocity" operation="base_set" value="20"/>
+			<passive_effect name="ProjectileStickChance" operation="perc_set" value="0"/>
+			<display_value name="dStrength" value="3"/>
+			<display_value name="dCarryCapacity" value="50"/>
+			<display_value name="$waterAmountAdd" value="0"/>
+			<display_value name="dDuration" value="603"/>
+			<triggered_effect trigger="onSelfDamagedOther" action="ModifyCVar" target="other" cvar="$buffDrugSteroidsDuration" operation="add" value="603"/>
+			<triggered_effect trigger="onSelfDamagedOther" action="ModifyCVar" target="other" cvar="$buffDrugSteroidsDuration" operation="set" value="1803">
+				<requirement name="CVarCompare" target="other" cvar="$buffDrugSteroidsDuration" operation="GT" value="1803"/></triggered_effect>
+			<triggered_effect trigger="onSelfDamagedOther" action="AddBuff" target="other" buff="buffDrugSteroids"/>
+	</effect_group>
+</item>
+</append>
+</MedXpansion>

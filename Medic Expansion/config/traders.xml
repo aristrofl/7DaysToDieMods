@@ -1,0 +1,10 @@
+<MedXpansion>
+<append xpath="/traders/trader_item_groups/trader_item_group[@name='ammo']">
+	<item name="MedXpansionMedicAmmoHealSmall" count="6,25"/>
+	<item name="MedXpansionMedicAmmoHealMedium" count="6,25"/>
+	<item name="MedXpansionMedicAmmoHealLarge" count="6,25"/>
+	<item name="MedXpansionMedicAmmoSleep" count="6,25"/>
+	<item name="MedXpansionMedicAmmoBuff" count="6,25"/>
+</append>
+
+</MedXpansion>

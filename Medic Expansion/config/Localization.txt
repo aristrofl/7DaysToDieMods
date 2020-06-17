@@ -1,0 +1,13 @@
+Key,File,Type,UsedInMainMenu,NoTranslate,english,Context
+MedXpansionMedicGun,blocks,Container,,,"Blaster MD",,
+MedXpansionMedicGunDesc,blocks,Container,,,"This modified nailgun fires special chemical darts that can heal, enhance or stun! Unlocked by Yeah Science 1.",,
+MedXpansionMedicAmmoHealSmall,blocks,Container,,,"Light Healing Dart",,
+MedXpansionMedicAmmoHealSmallDesc,blocks,Container,,,"Give someone a little pick me up. Unlocked by Yeah Science 1.",,
+MedXpansionMedicAmmoHealMedium,blocks,Container,,,"Healing Dart",,
+MedXpansionMedicAmmoHealMediumDesc,blocks,Container,,,"Good healing, from a good distance. Unlocked by Yeah Science 3.",,
+MedXpansionMedicAmmoHealLarge,blocks,Container,,,"Heavy Healing Dart",,
+MedXpansionMedicAmmoHealLargeDesc,blocks,Container,,,"Top of the line ranged healing tech! Unlocked by Yeah Science 4.",,
+MedXpansionMedicAmmoSleep,blocks,Container,,,"Stun Dart",,
+MedXpansionMedicAmmoSleepDesc,blocks,Container,,,"Stun your enemy with this handy dart! Unlocked by Yeah Science 4.",,
+MedXpansionMedicAmmoBuff,blocks,Container,,,"Adreno-Dart",,
+MedXpansionMedicAmmoBuffDesc,blocks,Container,,,"Applies steroids to target with less downsides! Unlocked by Yeah Science 2.",,

@@ -1,0 +1,6 @@
+<MedXpansion>
+	<append xpath="/progression/perks/perk[@name='perkYeahScience']/effect_group/passive_effect[@name='RecipeTagUnlocked'][@level='1,5']/@tags">,MedXpansionMedicAmmoHealSmall,MedXpansionMedicGun</append>
+	<append xpath="/progression/perks/perk[@name='perkYeahScience']/effect_group/passive_effect[@name='RecipeTagUnlocked'][@level='2,5']/@tags">,MedXpansionMedicAmmoBuff</append>
+	<append xpath="/progression/perks/perk[@name='perkYeahScience']/effect_group/passive_effect[@name='RecipeTagUnlocked'][@level='3,5']/@tags">,MedXpansionMedicAmmoHealMedium</append>
+	<append xpath="/progression/perks/perk[@name='perkYeahScience']/effect_group/passive_effect[@name='RecipeTagUnlocked'][@level='4,5']/@tags">,MedXpansionMedicAmmoSleep,MedXpansionMedicAmmoHealLarge</append>
+</MedXpansion>

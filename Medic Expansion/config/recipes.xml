@@ -1,0 +1,45 @@
+<MedXpansion>
+<append xpath="/recipes">
+
+	<recipe name="MedXpansionMedicGun" count="1" craft_area="workbench" craft_time="30" tags="perkYeahScience,learnable">
+		<ingredient name="gunPistolParts" count="2"/>
+		<ingredient name="gunToolNailgun" count="1"/>
+		<ingredient name="resourceDuctTape" count="3"/>
+		<ingredient name="resourceScrapPolymers" count="6"/>
+		<ingredient name="resourceSpring" count="2"/>
+		<effect_group>
+			<passive_effect name="CraftingIngredientCount" level="2,6" operation="perc_add" value=".5,2.5" tags="gunPistolParts,resourceDuctTape,resourceScrapPolymers,resourceSpring"/>
+		</effect_group>
+	</recipe>
+	<recipe name="MedXpansionMedicAmmoHealSmall" count="1" craft_time="30" tags="perkYeahScience,learnable">
+		<ingredient name="ammoDartIron" count="1"/>
+		<ingredient name="medicalBandage" count="1"/>
+		<ingredient name="resourceGunPowder" count="5"/>
+		<ingredient name="resourceScrapPolymers" count="1"/>
+	</recipe>
+	<recipe name="MedXpansionMedicAmmoHealMedium" count="1" craft_time="30" tags="perkYeahScience,learnable">
+		<ingredient name="ammoDartIron" count="1"/>
+		<ingredient name="medicalFirstAidBandage" count="1"/>
+		<ingredient name="resourceGunPowder" count="3"/>
+		<ingredient name="resourceScrapPolymers" count="2"/>
+	</recipe>
+	<recipe name="MedXpansionMedicAmmoHealLarge" count="1" craft_time="30" tags="perkYeahScience,learnable">
+		<ingredient name="ammoDartIron" count="1"/>
+		<ingredient name="medicalFirstAidKit" count="1"/>
+		<ingredient name="resourceGunPowder" count="5"/>
+		<ingredient name="resourceScrapPolymers" count="3"/>
+	</recipe>
+	<recipe name="MedXpansionMedicAmmoSleep" count="1" craft_time="30" tags="perkYeahScience,learnable">
+		<ingredient name="ammoDartIron" count="1"/>
+		<ingredient name="resourceAcid" count="1"/>
+		<ingredient name="resourceGunPowder" count="4"/>
+		<ingredient name="resourceScrapPolymers" count="1"/>
+	</recipe>
+	<recipe name="MedXpansionMedicAmmoBuff" count="1" craft_time="30" tags="perkYeahScience,learnable">
+		<ingredient name="ammoDartIron" count="1"/>
+		<ingredient name="drugSteroids" count="1"/>
+		<ingredient name="resourceGunPowder" count="2"/>
+		<ingredient name="resourceScrapPolymers" count="1"/>
+	</recipe>
+</append>
+</MedXpansion>
